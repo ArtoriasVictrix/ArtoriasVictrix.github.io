@@ -805,7 +805,7 @@ input[type=checkbox]:checked + label::before {
 }
 input[type=checkbox]:checked + label::after {
   width: 3px;
-  height: 7px;
+  height: 6px;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff
 }
@@ -881,6 +881,9 @@ form .checkbox._sm label {
 }
 form .checkbox._sm label::before {
   top: -1px
+}
+form .checkbox._sm label::after {
+  top: 1px
 }
 .amount {
   position: relative;
