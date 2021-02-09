@@ -213,6 +213,7 @@
 									<div class="basket__item-total">99 275 000 ₽</div>
 								</div>
 							</div>
+							<p class="p3x text-light">Ваша корзина пуста</p>
 						</div>
 						<div class="basket__bottom">
 							<div class="basket__sum-total">Итого<span>321 725 000 ₽</span></div><a class="button _sm" href="order.html">Оформить заказ</a>
@@ -310,12 +311,17 @@
 										<div class="radio mt2x"><input type="radio" name="category" id="other"><label for="other">Другое</label></div>
 									</div>
 									<div class="catalogue__filter">
-										<div class="catalogue__filter-title">Тип</div>
-										<div class="checkbox"><input type="checkbox" id="vertical-s"><label for="vertical-s">Вертикальные солярии</label></div>
-										<div class="checkbox mt2x"><input type="checkbox" id="horizontal-s"><label for="horizontal-s">Горизонтальные солярии</label></div>
-										<div class="checkbox mt2x"><input type="checkbox" id="collagenaria"><label for="collagenaria">Коллагенарии</label></div>
-										<div class="checkbox mt2x"><input type="checkbox" id="collariums"><label for="collariums">Коллариумы</label></div>
-										<div class="checkbox mt2x"><input type="checkbox" id="home-s"><label for="home-s">Домашние солярии</label></div>
+										<div class="catalogue__filter-title">Производитель</div>
+										<div class="checkbox"><input type="checkbox" id="lighttech"><label for="lighttech">LightTech</label></div>
+										<div class="checkbox mt2x"><input type="checkbox" id="sylvania"><label for="sylvania">Sylvania</label></div>
+										<div class="checkbox mt2x"><input type="checkbox" id="cosmedico"><label for="cosmedico">JW Sales (Cosmedico)</label></div>
+									</div>
+									<div class="catalogue__filter">
+										<div class="catalogue__filter-title">Бренд</div>
+										<div class="checkbox"><input type="checkbox" id="ecological"><label for="ecological">Ecological</label></div>
+										<div class="checkbox mt2x"><input type="checkbox" id="energy"><label for="energy">Energy</label></div>
+										<div class="checkbox mt2x"><input type="checkbox" id="lightvintage"><label for="lightvintage">Lightvintage</label></div>
+										<div class="checkbox mt2x"><input type="checkbox" id="magicsun"><label for="magicsun">MagicSun</label></div><button class="_pseudolink mt3x" type="button">Показать еще</button>
 									</div>
 									<div class="catalogue__filter">
 										<div class="catalogue__filter-title">Цена (руб.)</div>
@@ -324,32 +330,6 @@
 										</div>
 										<div class="flex _center _left"><label class="field-title mr2x" for="price-from">от</label><input class="_rounded" type="text" name="price-from" placeholder="275 000"></div>
 										<div class="flex _center _left mt2x"><label class="field-title mr2x" for="price-to">до</label><input class="_rounded" type="text" name="price-to" placeholder="3 275 000"></div>
-									</div>
-									<div class="catalogue__filter">
-										<div class="catalogue__filter-title">Производитель</div>
-										<div class="checkbox"><input type="checkbox" id="vendor-tecnosole"><label for="vendor-tecnosole">Tecnosole</label></div>
-										<div class="checkbox mt2x"><input type="checkbox" id="vendor-ultraSun"><label for="vendor-ultraSun">UltraSun</label></div>
-										<div class="checkbox mt2x"><input type="checkbox" id="vendor-megaSun"><label for="vendor-megaSun">MegaSun</label></div>
-										<div class="checkbox mt2x"><input type="checkbox" id="vendor-ergoline"><label for="vendor-ergoline">Ergoline</label></div><button class="_pseudolink mt3x" type="button">Показать еще</button>
-									</div>
-									<div class="catalogue__filter">
-										<div class="catalogue__filter-title">Питание</div>
-										<div class="radio"><input type="radio" name="voltage" id="voltage-380"><label for="voltage-380">380 В</label></div>
-										<div class="radio mt2x"><input type="radio" name="voltage" id="voltage-220"><label for="voltage-220">220 В</label></div>
-									</div>
-									<div class="catalogue__filter">
-										<div class="catalogue__filter-title">Количество ламп (шт.)</div>
-										<div class="range">
-											<div id="count-range"></div>
-										</div>
-										<div class="flex _center _left"><label class="field-title mr2x" for="lamp-count-from">от</label><input class="_rounded _short mr-auto" type="text" id="lamp-count-from" placeholder="4"><label class="field-title mr2x" for="lamp-count-to">до</label><input class="_rounded _short" type="text" id="lamp-count-to" placeholder="56"></div>
-									</div>
-									<div class="catalogue__filter">
-										<div class="catalogue__filter-title">Мощность ламп (Вт)</div>
-										<div class="range">
-											<div id="power-range"></div>
-										</div>
-										<div class="flex _center _left"><label class="field-title mr2x" for="lamp-power-from">от</label><input class="_rounded _short mr-auto" type="text" id="lamp-power-from" placeholder="20"><label class="field-title mr2x" for="lamp-power-to">от</label><input class="_rounded _short" type="text" id="lamp-power-to" placeholder="251"></div>
 									</div>
 									<div class="catalogue__filter">
 										<div class="flex _center _left"><button class="_pseudolink mr-auto" type="button">Сбросить</button><button class="button" type="button">Применить</button></div>
@@ -367,8 +347,6 @@
 											<option value="" data-class="tiles-view-down">По цене</option>
 											<option value="" data-class="tiles-view-up">По популярности</option>
 											<option value="" data-class="tiles-view-down">По популярности</option>
-											<option value="" data-class="tiles-view-up">По наличию</option>
-											<option value="" data-class="tiles-view-down">По наличию</option>
 										</select>
 										<div class="catalogue__sort-view switcher ml3x"><input type="radio" name="view-type" id="view-type-list"><label for="view-type-list"><svg class="icon icon-view-list switcher__icon mr2x">
 													<use xlink:href="/img/svg/icons.svg#view-list"></use>
