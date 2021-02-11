@@ -7794,6 +7794,10 @@ only screen and (max-width:600px) {
     margin-top: 10px
   }
 }
+.review__date {
+  margin-left: 6px;
+  color: rgba(112,116,197,.3)
+}
 .review__location {
   color: #7074c5;
   margin-top: 3px
