@@ -8,13 +8,13 @@ $(window).on('load', function(){
 	}
 
 	// Отключил кнопки, чтобы показать модальные окна
-	$("form button").on('click', function(e) {
-		e.preventDefault();
+	$("form button").on('click', function(evt) {
+		evt.preventDefault();
 	});
 
 
 	// Лоадер
-	$("#btn-loader").on('click', function() {
+	$(".js-loader").on('click', function() {
 		$(this).toggleClass('_loader');
 		$('#blk-loader').toggleClass('_loader');
 	});
@@ -62,10 +62,13 @@ $(window).on('load', function(){
 			$(this).parents('.modal').removeClass('_visible');
 		})
 
-		$('.modal-overlay').on('click', function() {
-			$('.modal').removeClass('_visible');
-			$('body').removeClass('no-scroll');
-			$('.modal__inner').removeClass('_open');
+		$(document).on('click', function(evt) {
+			var target = $(evt.target);
+			if ($(target).hasClass("modal") || $(target).hasClass("modal__container")) {
+				$('.modal').removeClass('_visible');
+				$('body').removeClass('no-scroll');
+				$('.modal__inner').removeClass('_open');
+			}
 		})
 	}
 	modal();
@@ -245,29 +248,23 @@ $(window).on('load', function(){
 		animating = false;
 
 	// Добавление товара
-	$('.add-product').on('click', function() {
+	$('.js-add-product').on('click', function() {
 		button = $(this);
-		setTimeout(function(){
-			$(button).removeClass('_loader');
-
-			if(!animating) {
-				animating =  true;
+		if(!animating) {
+			animating =  true;
+			$(this).addClass('_loader');
+			setTimeout(function(){
+				$(button).removeClass('_loader');
 				amount = Number(cartCountItems[1].innerText);
 				addBtn = $(button)
-				addBtn.addClass('is-added').find('path').eq(0).animate({
-					//draw the check icon
-					'stroke-dashoffset':0
-				}, 300, function(){
-					setTimeout(function(){
-						basket(amount, 1);
-						addBtn.removeClass('is-added').find('span').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-							addBtn.find('path').eq(0).css('stroke-dashoffset', '19.79');
-							animating =  false;
-						});
-					}, 600);
-				});
-			}
-		},2000);
+				addBtn.addClass('is-added');
+				setTimeout(function(){
+					basket(amount, 1);
+					addBtn.removeClass('is-added');
+					animating =  false;
+				}, 600);
+			}, 1000);
+		}
 	});
 
 	// Удаление товара

@@ -9,17 +9,17 @@ $(window).on('load', function () {
 			breakpoints: {
 				320: {
 					slidesPerView: 3,
-					spaceBetween: 5
+					spaceBetween: 5,
 				},
 				400: {
 					slidesPerView: 4,
-					spaceBetween: 10
+					spaceBetween: 10,
 				},
 				900: {
-					slidesPerView: 5
+					slidesPerView: 5,
 				},
 				1200: {
-					slidesPerView: 7
+					slidesPerView: 7,
 				}
 			}
 		});
@@ -38,7 +38,6 @@ $(window).on('load', function () {
 				// Переключение на след. слайд, если последний видимый
 				slideChange: function () {
 					let activeIndex = this.activeIndex;
-					console.log(activeIndex)
 					let activeSlide = $('.article-slider._thumbs .swiper-slide').eq(activeIndex);
 					let nextSlide = $('.article-slider._thumbs .swiper-slide').eq(activeIndex + 1);
 					let prevSlide = $('.article-slider._thumbs .swiper-slide').eq(activeIndex - 1);

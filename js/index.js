@@ -5,10 +5,11 @@ $(window).on('load', function(){
 	$('.discounts__content._active').fadeIn();
 
 	$('.discounts__label:not("._more")').on('click', function() {
+		var labelParent = $(this).parents('.discounts');
 		var index = $(this).index();
-		$('.discounts__label._active, .discounts__content._active').removeClass('_active');
+		labelParent.find('.discounts__label._active, .discounts__content._active').removeClass('_active');
 		$(this).addClass('_active');
-		$('.discounts__content').eq(index).addClass('_active').fadeIn(300);
+		labelParent.find('.discounts__content').eq(index).addClass('_active').fadeIn(300);
 	});
 
 	// Слайдер на главной
