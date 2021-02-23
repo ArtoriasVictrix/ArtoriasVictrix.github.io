@@ -46,7 +46,8 @@ $(window).on('load', function(){
 	function modal() {
 		$('[data-modal-target]').on('click', function() {
 			var target = $(this).attr('data-modal-target');
-			$(target).addClass('_visible');
+			$(target).addClass('_show')
+					.fadeIn();
 			if ($(target).hasClass('_animation')) {
 				$(target).find('.modal__inner').addClass('_open')
 			}
@@ -59,13 +60,15 @@ $(window).on('load', function(){
 				$('body').removeClass('no-scroll');
 				$('.modal__inner').removeClass('_open');
 			}
-			$(this).parents('.modal').removeClass('_visible');
+			$(this).parents('.modal').removeClass('_show')
+								.fadeOut();
 		})
 
 		$(document).on('click', function(evt) {
 			var target = $(evt.target);
 			if ($(target).hasClass("modal") || $(target).hasClass("modal__container")) {
-				$('.modal').removeClass('_visible');
+				$('.modal').removeClass('_show')
+						.fadeOut();
 				$('body').removeClass('no-scroll');
 				$('.modal__inner').removeClass('_open');
 			}

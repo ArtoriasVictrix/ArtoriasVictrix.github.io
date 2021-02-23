@@ -51,4 +51,4 @@ $(window).on('load', function () {
 	}
 
 	findVideos();
-})
+});

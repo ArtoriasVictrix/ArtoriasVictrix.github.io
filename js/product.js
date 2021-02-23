@@ -47,4 +47,4 @@ $(window).on('load', function () {
 		$('.tabs__content').removeClass('_active')
 						.eq(1).addClass('_active');
 	});
-})
+});

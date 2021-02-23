@@ -10,7 +10,7 @@ $(document).ready(function() {
 			'min': 0,
 			'max': 100
 		}
-	})
+	});
 
 
 	// Switching the result
@@ -43,6 +43,5 @@ $(document).ready(function() {
 			'min': 0,
 			'max': 100
 		}
-	})
-
-})
+	});
+});

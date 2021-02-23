@@ -50,4 +50,4 @@ $(window).on('load', function () {
 			}
 		});
 	});
-})
+});
