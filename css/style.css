@@ -323,9 +323,7 @@ table caption {
   box-sizing: border-box
 }
 html {
-  height: 100%;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch
+  height: 100%
 }
 body {
   min-height: 100%;
