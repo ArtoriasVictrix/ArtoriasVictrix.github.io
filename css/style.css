@@ -323,7 +323,9 @@ table caption {
   box-sizing: border-box
 }
 html {
-  height: 100%
+  height: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch
 }
 body {
   min-height: 100%;
@@ -4547,7 +4549,7 @@ tfoot td {
   flex-wrap: wrap
 }
 .modal__bottom button {
-  margin-top: 15px
+  margin-top: 20px
 }
 .modal__sum-total {
   display: -ms-flexbox;
