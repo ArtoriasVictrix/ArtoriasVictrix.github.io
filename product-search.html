@@ -10,20 +10,21 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/favicon/site.webmanifest">
-	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#2D3388">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#2d3388">
 	<meta name="apple-mobile-web-app-title" content="TanCity">
 	<meta name="application-name" content="TanCity">
-	<meta name="msapplication-TileColor" content="#2D3388">
-	<meta name="theme-color" content="#2D3388">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#2d3388">
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 	<meta name="robots" content="noindex, nofollow">
 	<title>TanCity</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="libs/jquery-nice-select/css/nice-select.css">
-	<link rel="stylesheet" href="libs/no-ui-slider/nouislider.css">
+	<link rel="stylesheet" href="libs/no-ui-slider/nouislider.min.css">
 	<link rel="stylesheet" href="libs/tooltipster/tooltipster.bundle.min.css">
 	<link rel="stylesheet" href="libs/lightbox/css/lightbox.min.css">
-	<script src="libs/swiper/js/swiper.min.js"></script>
 	<link rel="stylesheet" href="libs/swiper/css/swiper.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="libs/svg4everybody/svg4everybody.min.js"></script>
@@ -81,7 +82,7 @@
 							<li class="header__menu-item"><a class="header__menu-link" href="sales.html" data-counter="56">Акции</a></li>
 						</ul>
 					</nav>
-					<div class="header-search field"><input class="_light-border" type="search" placeholder="Поиск"><svg class="icon icon-search field__icon">
+					<div class="header-search field"><input class="_light-border" type="search" placeholder="Поиск" aria-label="Поиск по товарам"><svg class="icon icon-search field__icon">
 							<use xlink:href="/img/svg/icons.svg#search"></use>
 						</svg>
 						<div class="search-block">
@@ -400,20 +401,20 @@
 					<div class="footer__block _contacts col-2 _t-l-4 _left-t-l-2 _t-s-6 _m-12">
 						<div class="footer__menu-title">Контакты</div>
 						<ul class="footer__messenger-list">
-							<li class="footer__messenger-item"><a class="footer__messenger-link" href="/"><svg class="icon icon-social--whatsapp footer__messenger-icon">
+							<li class="footer__messenger-item"><a class="footer__messenger-link" href="/"><span class="visually-hidden">TanCity в WhatsApp</span><svg class="icon icon-social--whatsapp footer__messenger-icon">
 										<use xlink:href="/img/svg/icons.svg#social--whatsapp"></use>
 									</svg></a></li>
-							<li class="footer__messenger-item"><a class="footer__messenger-link" href="/"><svg class="icon icon-social--viber footer__messenger-icon">
+							<li class="footer__messenger-item"><a class="footer__messenger-link" href="/"><span class="visually-hidden">TanCity в Viber</span><svg class="icon icon-social--viber footer__messenger-icon">
 										<use xlink:href="/img/svg/icons.svg#social--viber"></use>
 									</svg></a></li>
 						</ul><a class="footer__phone" href="tel:+74954106693">8 (495) 410-66-93</a>
 						<p class="footer__time mt1x">10:00 - 18:00 по&nbsp;МСК</p><a class="footer__email mt1x" href="mailto:info@tancity.ru">info@tancity.ru</a>
 						<p class="mt6x text-primary">Мы в&nbsp;соцсетях</p>
-						<div class="footer__social-list"><a class="footer__social-link" href="/"><svg class="icon icon-social--vk footer__social-icon">
+						<div class="footer__social-list"><a class="footer__social-link" href="/"><span class="visually-hidden">TanCity Вконтакте</span><svg class="icon icon-social--vk footer__social-icon">
 									<use xlink:href="/img/svg/icons.svg#social--vk"></use>
-								</svg></a><a class="footer__social-link" href="/"><svg class="icon icon-social--inst footer__social-icon">
+								</svg></a><a class="footer__social-link" href="/"><span class="visually-hidden">TanCity в Instagram</span><svg class="icon icon-social--inst footer__social-icon">
 									<use xlink:href="/img/svg/icons.svg#social--inst"></use>
-								</svg></a><a class="footer__social-link" href="/"><svg class="icon icon-social--fb footer__social-icon">
+								</svg></a><a class="footer__social-link" href="/"><span class="visually-hidden">TanCity в Facebook</span><svg class="icon icon-social--fb footer__social-icon">
 									<use xlink:href="/img/svg/icons.svg#social--fb"></use>
 								</svg></a></div>
 					</div>
@@ -493,6 +494,7 @@
 			</div>
 		</div>
 		<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+		<script src="libs/swiper/js/swiper.min.js"></script>
 		<script src="libs/jquery-masked-input/jquery.maskedinput.min.js"></script>
 		<script src="libs/jquery-nice-select/js/jquery.nice-select.js"></script>
 		<script src="libs/no-ui-slider/nouislider.min.js"></script>
