@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="description" content="Интернет-каталог ламп и запчастей для соляриев. В ассортименте компании TanCity имеются все необходимые товары для загара.">
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -31,6 +31,8 @@
 	<script>
 		svg4everybody();
 	</script>
+	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+	<script src="libs/jquery-nice-select/js/jquery.nice-select.js"></script>
 </head>
 
 <body>
@@ -431,7 +433,15 @@
 			<div class="modal__container _top-right">
 				<div class="modal__inner _sm">
 					<div class="modal__title">Обратный звонок</div>
-					<div class="modal__text text-light">Оставьте ваш номер телефона и&nbsp;мы вам перезвоним</div><input class="mb4x" type="tel" name="phone" placeholder="+7 (___) ___-__-__"><button class="button" data-modal-target="#application-sent">Отправить</button><button class="modal__close"><svg class="icon icon-cross modal__close-icon">
+					<div class="modal__text text-light">Оставьте ваш номер телефона и&nbsp;мы вам перезвоним</div><input class="mb4x" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+					<div class="recaptcha-container mb4x">
+						<div id="recaptcha4" class="recaptcha">
+							<div style="width: 304px; height: 78px;">
+								<div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lct1boaAAAAAGapLgz3KMaCrdnDoob7GM26ONEP&amp;co=aHR0cDovL21hZC5oYm1kZXYuY29tOjgw&amp;hl=ru&amp;v=dpzVjBAupwRfx3UzvXRnnAKb&amp;size=normal&amp;cb=vyiltbv4nv95" width="304" height="78" role="presentation" name="a-rw2d67w2epnf" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+								</div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px;height: 40px;border: 1px solid rgb(193, 193, 193);margin: 10px 25px;padding: 0px;resize: none;display: none;"></textarea>
+							</div>
+						</div>
+					</div><button class="button" data-modal-target="#application-sent">Отправить</button><button class="modal__close"><svg class="icon icon-cross modal__close-icon">
 							<use xlink:href="/img/svg/icons.svg#cross"></use>
 						</svg></button>
 				</div>
@@ -493,12 +503,15 @@
 				</div>
 			</div>
 		</div>
-		<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+		<script>
+			$('select').niceSelect();
+		</script>
 		<script src="libs/swiper/js/swiper.min.js"></script>
 		<script src="libs/jquery-masked-input/jquery.maskedinput.min.js"></script>
-		<script src="libs/jquery-nice-select/js/jquery.nice-select.js"></script>
 		<script src="libs/no-ui-slider/nouislider.min.js"></script>
 		<script src="libs/tooltipster/tooltipster.bundle.min.js"></script>
+		<script src="libs/jquery-validate/jquery.validate.js"></script>
+		<script src="libs/jquery-validate/localization/messages_ru.min.js"></script>
 		<script src="libs/lightbox/js/lightbox.min.js"></script>
 		<script src="libs/detectMobile/detectMobileBrowsers.js"></script>
 		<script src="libs/notify/notify.js"></script>

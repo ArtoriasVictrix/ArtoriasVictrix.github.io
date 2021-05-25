@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="description" content="Интернет-каталог ламп и запчастей для соляриев. В ассортименте компании TanCity имеются все необходимые товары для загара.">
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -31,6 +31,8 @@
 	<script>
 		svg4everybody();
 	</script>
+	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+	<script src="libs/jquery-nice-select/js/jquery.nice-select.js"></script>
 </head>
 
 <body>
@@ -298,7 +300,10 @@
 			</section>
 			<section class="section article-item">
 				<div class="container _textpage">
-					<h1>PureSun</h1>
+					<div class="article-item__heading">
+						<h1>PureSun</h1>
+						<div class="article-item__brand"><img src="../img/brands/PureSun.png" alt="Бренд PureSun"></div>
+					</div>
 					<div class="mb2x"><a href="www.puresun.co.uk">www.puresun.co.uk</a></div>
 					<p>Организация и комплексное оснащение студий загара и салонов красоты соляриями, коллагенариями и сопутствующим оборудованием. Продажа соляриев, коллагенариев, систем автозагара. Консультации по подбору оборудования и планированию вашего бизнес-проекта, информационная поддержка, создание проектов "под ключ". Организация продажи вашего солярия бывшего в употреблении, предпродажная подготовка вашего солярия. Покупка/продажа б/у соляриев (помощь в продаже).</p>
 					<p>Оптовая и мелкооптовая поставка расходных материалов, косметики для загара ведущих производителей косметики для загара производста США: Australian Gold, Caribbean Gold (Cheers!), Emerald Bay и Tropical Tan (Россия). Гибкая ценовая политика и индивидуальный подход.</p>
@@ -309,7 +314,7 @@
 					<h4>Поставка полного спектра запчастей</h4>
 					<p>Поставка полного спектра запчастей, доп. оборудования (пульты, жетоноприёмники, системы аквабриз и пр.) для большинства соляриев на российском рынке.</p>
 					<h4>Замена стёкол для соляриев оригинальных и неоригинальных, зеркальных полов</h4>
-					<p>Неоригинальные акриловые стёкла для соляриев толщиной 2, 3, 4, 5 мм вырезаются индивидуально по размерам заказчика. Неоригинальное стекло изготавливается в основном неформованное, если в вашем солярии нужно заменить эргономичное стёкло, то необходимо помнить, что они бывают только оригинальными. При установке неоригинала, после прошествия некоторого времени это стекло формуется под воздействием ультрафиолета и температуры, принимает и сохраняет заданную форму. Возможно изготовление акриловых стёкол для соляриев с радиусным и прямым изгибом, в том числе матовых. Помните, стёкла для соляриев должны быть изготовлены из специального качественного акрила и иметь высокие показатели "прозрачности" и "открытости" для пропускания УФ лучей. Приобретайте стёкла для соляриев только у надёжных и проверенных поставщиков</p><a class="product__brand" href="puresun.html"><img src="../img/brands/PureSun.png" alt="Бренд PureSun"></a>
+					<p>Неоригинальные акриловые стёкла для соляриев толщиной 2, 3, 4, 5 мм вырезаются индивидуально по размерам заказчика. Неоригинальное стекло изготавливается в основном неформованное, если в вашем солярии нужно заменить эргономичное стёкло, то необходимо помнить, что они бывают только оригинальными. При установке неоригинала, после прошествия некоторого времени это стекло формуется под воздействием ультрафиолета и температуры, принимает и сохраняет заданную форму. Возможно изготовление акриловых стёкол для соляриев с радиусным и прямым изгибом, в том числе матовых. Помните, стёкла для соляриев должны быть изготовлены из специального качественного акрила и иметь высокие показатели "прозрачности" и "открытости" для пропускания УФ лучей. Приобретайте стёкла для соляриев только у надёжных и проверенных поставщиков</p>
 				</div>
 			</section>
 			<section class="section article-list mt12x">
@@ -408,7 +413,15 @@
 			<div class="modal__container _top-right">
 				<div class="modal__inner _sm">
 					<div class="modal__title">Обратный звонок</div>
-					<div class="modal__text text-light">Оставьте ваш номер телефона и&nbsp;мы вам перезвоним</div><input class="mb4x" type="tel" name="phone" placeholder="+7 (___) ___-__-__"><button class="button" data-modal-target="#application-sent">Отправить</button><button class="modal__close"><svg class="icon icon-cross modal__close-icon">
+					<div class="modal__text text-light">Оставьте ваш номер телефона и&nbsp;мы вам перезвоним</div><input class="mb4x" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+					<div class="recaptcha-container mb4x">
+						<div id="recaptcha4" class="recaptcha">
+							<div style="width: 304px; height: 78px;">
+								<div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lct1boaAAAAAGapLgz3KMaCrdnDoob7GM26ONEP&amp;co=aHR0cDovL21hZC5oYm1kZXYuY29tOjgw&amp;hl=ru&amp;v=dpzVjBAupwRfx3UzvXRnnAKb&amp;size=normal&amp;cb=vyiltbv4nv95" width="304" height="78" role="presentation" name="a-rw2d67w2epnf" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+								</div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px;height: 40px;border: 1px solid rgb(193, 193, 193);margin: 10px 25px;padding: 0px;resize: none;display: none;"></textarea>
+							</div>
+						</div>
+					</div><button class="button" data-modal-target="#application-sent">Отправить</button><button class="modal__close"><svg class="icon icon-cross modal__close-icon">
 							<use xlink:href="/img/svg/icons.svg#cross"></use>
 						</svg></button>
 				</div>
@@ -470,12 +483,15 @@
 				</div>
 			</div>
 		</div>
-		<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+		<script>
+			$('select').niceSelect();
+		</script>
 		<script src="libs/swiper/js/swiper.min.js"></script>
 		<script src="libs/jquery-masked-input/jquery.maskedinput.min.js"></script>
-		<script src="libs/jquery-nice-select/js/jquery.nice-select.js"></script>
 		<script src="libs/no-ui-slider/nouislider.min.js"></script>
 		<script src="libs/tooltipster/tooltipster.bundle.min.js"></script>
+		<script src="libs/jquery-validate/jquery.validate.js"></script>
+		<script src="libs/jquery-validate/localization/messages_ru.min.js"></script>
 		<script src="libs/lightbox/js/lightbox.min.js"></script>
 		<script src="libs/detectMobile/detectMobileBrowsers.js"></script>
 		<script src="libs/notify/notify.js"></script>
