@@ -22,8 +22,8 @@ $(window).on('load', function () {
       }, {
         iconLayout: 'default#image',
         iconImageHref: 'img/svg/marker.svg',
-        iconImageSize: [40, 40],
-        iconImageOffset: [-20, -40]
+        iconImageSize: [30, 40],
+        iconImageOffset: [-15, -40]
       });
       myMap.geoObjects.add(place);
     }
