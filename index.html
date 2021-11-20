@@ -130,11 +130,11 @@
 	<!-- End Facebook Pixel Code -->
 
 	<div class="app">
-		<a class="app__logo-container" id="link" href="https://play.google.com/store/apps/details?id=ru.easyanatomy">
+		<a class="app__logo-container" id="link" href="https://apps.apple.com/app/apple-store/id1130351296?pt=10214800&ct=webtoapp&mt=8">
 			<img class="app__logo" src="./img/logo.png" alt="Download EasyAnatomy">
 		</a>
 		<h1 class="app__name">Easy anatomy</h1>
-		<a class="app__btn" id="btn" href="https://play.google.com/store/apps/details?id=ru.easyanatomy">
+		<a class="app__btn" id="btn" href="https://apps.apple.com/app/apple-store/id1130351296?pt=10214800&ct=webtoapp&mt=8">
 			Try for free
 		</a>
 	</div>
@@ -143,7 +143,7 @@
 		var btn = document.getElementById('btn');
 		var userLang = navigator.language || navigator.userLanguage;
 		var linkElement = document.getElementById('link');
-		var iOSLink = 'https://apps.apple.com/app/apple-store/id1130351296?pt=10214800&ct=webtoapp&mt=8';
+		var androidLink = 'https://play.google.com/store/apps/details?id=ru.easyanatomy';
 
 		// Если язык браузра - русский, то...
 		if (userLang === 'ru-RU') {
@@ -168,9 +168,10 @@
 			|| navigator.userAgent.includes('Mac') && 'ontouchend' in document; // iPad on iOS 13 detection
 		}
 
-		// Если устройство iOS, то меняем ссылку Google Play на App Store
-		if (iOS()) {
-			linkElement.href = iOSLink; // Подставляем ссылку на AppStore
+		// Если устройство Android, то меняем ссылку App Store на Google Play
+		if (!iOS()) {
+			linkElement.href = androidLink;
+			btn.href = androidLink;
 		}
 	</script>
 </body>
