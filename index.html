@@ -140,20 +140,20 @@
 	</div>
 
 	<script>
-		const btn = document.getElementById('btn');
-		const userLang = navigator.language || navigator.userLanguage;
-		const linkElement = document.getElementById('link');
-		const iOSLink = 'https://apps.apple.com/app/apple-store/id1130351296?pt=10214800&ct=webtoapp&mt=8';
+		var btn = document.getElementById('btn');
+		var userLang = navigator.language || navigator.userLanguage;
+		var linkElement = document.getElementById('link');
+		var iOSLink = 'https://apps.apple.com/app/apple-store/id1130351296?pt=10214800&ct=webtoapp&mt=8';
 
 		// Если язык браузра - русский, то...
 		if (userLang === 'ru-RU') {
-			const htmlDoc = document.documentElement;
+			var htmlDoc = document.documentElement;
 
 			// Меняем текст в кнопке "Try for free"
 			btn.innerText = 'Скачать';
 
 			// Меняем язык документа на русский
-			htmlDoc.setAttribute('lang','ru');
+			htmlDoc.setAttribute('lang', 'ru');
 		}
 
 		function iOS() {
@@ -165,14 +165,12 @@
 				'iPhone',
 				'iPod'
 			].includes(navigator.platform)
-			// iPad on iOS 13 detection
-			|| (navigator.userAgent.includes('Mac') && 'ontouchend' in document);
+			|| navigator.userAgent.includes('Mac') && 'ontouchend' in document; // iPad on iOS 13 detection
 		}
 
 		// Если устройство iOS, то меняем ссылку Google Play на App Store
-		if(iOS()) {
-			// Подставляем ссылку на AppStore
-			linkElement.href = iOSLink;
+		if (iOS()) {
+			linkElement.href = iOSLink; // Подставляем ссылку на AppStore
 		}
 	</script>
 </body>
