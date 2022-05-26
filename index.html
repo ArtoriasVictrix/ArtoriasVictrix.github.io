@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="asap">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#4f2ed2">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#4f2ed2">
+	<meta name="author" content="Николай Жидков и разработчики ASAP PDF">
+	<title>ASAP PDF - Фреймворк для вёрстки PDF</title>
+	<meta name="description" content="Первый open-source фреймворк для вёрстки PDF">
+	<meta property="og:url" content="https://asap-pdf.com/">
+	<meta property="og:title" content="ASAP PDF">
+	<meta property="og:description" content="Первый в мире open-source фреймворк для вёрстки PDF.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://asap-pdf.com/img/asap-pdf-social.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1000">
+	<meta property="og:image:height" content="500">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="libs/css-vars-ponyfill/css-vars-ponyfill.min.js"></script>
+	<script src="libs/svg4everybody/svg4everybody.min.js"></script>
+	<script>
+		svg4everybody({
+			// To support gradients
+			polyfill: true
+		});
+
+		// Настройки полифилла CSS Custom Properties
+		cssVars({
+			shadowDOM: true,
+		});
+	</script>
+</head>
+
+<body>
+	<div class="root">
+		<header class="header">
+			<nav class="header__container container"><a class="header__logo" href="/"><img class="logo" src="/img/logo.svg" alt="ASAP PDF" width="152" height="32"></a>
+				<div class="header__navigation" id="headerNavigation">
+					<ul class="header__menu">
+						<li class="header__menu-item"><a class="header__link" href="#about">О фреймворке</a></li>
+						<li class="header__menu-item"><a class="header__link" href="#quick-start">Быстрый старт</a></li>
+						<li class="header__menu-item"><a class="header__link" href="#features">Возможности</a></li>
+						<li class="header__menu-item"><a class="header__link" href="#" target="_blank">Документация</a></li>
+					</ul>
+					<hr class="hr header__hr">
+					<ul class="header__menu header__menu--actions">
+						<li class="header__menu-item">
+							<div class="dropdown">
+								<button class="dropdown__toggle" id="dropdown" href="en/index.html" aria-expanded="false">
+									<svg class="icon icon-russia icon--cl icon--md mr-4">
+										<use xlink:href="/img/svg/icons.svg#russia"></use>
+									</svg>Русский
+									<svg class="icon icon-chevron-up dropdown__icon">
+										<use xlink:href="/img/svg/icons.svg#chevron-up"></use>
+									</svg>
+								</button>
+								<ul class="dropdown__menu" aria-labelledby="dropdown">
+									<li class="dropdown__item"><a class="dropdown__link" href="en/index.html">
+											<svg class="icon icon-united-states icon--cl icon--md mr-4">
+												<use xlink:href="/img/svg/icons.svg#united-states"></use>
+											</svg>English</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="index.html">
+											<svg class="icon icon-russia icon--cl icon--md mr-4">
+												<use xlink:href="/img/svg/icons.svg#russia"></use>
+											</svg>Русский</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="header__menu-item"><a class="btn btn--ghost btn--rounded" href="https://github.com/ArtoriasVictrix/asap-pdf" target="_blank" title="ASAP PDF на GitHub" rel="noopener">
+								<svg class="icon icon-github icon--lg">
+									<use xlink:href="/img/svg/icons.svg#github"></use>
+								</svg></a></li>
+						<li class="header__menu-item"><a class="btn btn--primary fz-xs" href="https://github.com/ArtoriasVictrix/asap-pdf" rel="noopener">Скачать</a></li>
+					</ul>
+				</div>
+				<div class="header__burger">
+					<button class="btn btn--ghost btn--sm" id="headerMenuBtn" type="button" aria-controls="headerNavigation" aria-expanded="true" aria-label="Кнопка открытия меню">
+						<svg class="icon icon-menu icon--md">
+							<use xlink:href="/img/svg/icons.svg#menu"></use>
+						</svg>
+					</button>
+				</div>
+			</nav>
+		</header>
+		<main class="main">
+			<section class="section hero">
+				<div class="container">
+					<div class="row">
+						<div class="lg:col-6 col-12">
+							<div class="hero__content">
+								<h1 class="h1 text-primary ta-c lg:ta-l">ASAP PDF</h1>
+								<p class="h4 ta-c lg:ta-l lg:max-w-none md:max-w-340 max-w-300 lg:mx-0 mx-auto mt-16">Первый фреймворк для быстрой <br class="d-none lg:d-block">и&nbsp;удобной вёрстки PDF</p>
+								<div class="d-flex lg:flex-jc-start flex-jc-center mt-32"><a class="btn btn--primary lg:btn--lg" href="#">Скачать</a><a class="btn btn--ghost lg:btn--lg ml-12" href="#">Начать работу</a></div>
+								<p class="text-xs text-light fw-b lg:ta-l ta-c mt-20">Текущая версия v1.0.0</p>
+							</div>
+						</div>
+						<div class="lg:col-6 col-12 d-flex flex-jc-center">
+							<picture class="hero__picture">
+								<source type="image/webp" srcset="img/hero-doc.webp">
+								<source type="image/png" srcset="img/hero-doc.png"><img class="img-fluid hero__img" src="img/hero-doc.png" alt="Пример документа ASAP PDF" width="608" height="536">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section--light">
+				<div class="container">
+					<div class="row">
+						<div class="md:col-10 col-12 md:offset-1">
+							<h2 class="h2 section__heading" id="about">О фреймворке</h2>
+							<video class="video" controls="" title="Видео: как работает ASAP PDF">
+								<source src="../video/vscode-demo.mp4" type="video/mp4">
+								<source src="../video/vscode-demo.webm" type="video/webm">
+							</video>
+							<div class="md:mt-44 mt-28">
+								<p>
+									ASAP PDF предназначен для создания PDF-документов с&nbsp;помощью HTML и&nbsp;CSS (Pug/SCSS).
+									С&nbsp;помощью ASAP PDF вы&nbsp;можете:
+								</p>
+								<ul class="ul ul--point">
+									<li>Конвертировать HTML&nbsp;в PDF на лету;</li>
+									<li>Видеть в&nbsp;браузере результат, максимально приближенный к&nbsp;итоговому PDF;</li>
+									<li>
+										Вставлять все используемые ресурсы прямо в&nbsp;HTML без использования сторонних
+										сервисов (ваши изображения и&nbsp;шрифты кодируются в&nbsp;Base64, а&nbsp;стили
+										автоматически вставляются в&nbsp;head);
+									</li>
+									<li>Использовать готовые текстовые компоненты;</li>
+									<li>Переиспользовать компоненты благодаря Pug;</li>
+									<li>Не&nbsp;беспокоиться за&nbsp;настройку stylelint или pug-lint&nbsp;&mdash; они уже настроены;</li>
+									<li>
+										Проводить скриншот-тестирование проекта с&nbsp;удобным отчётом о&nbsp;результатах
+										тестирования.
+
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="h3 section__subheading">Примеры</div>
+					<div class="row row--gx-24 md:row--gy-0 row--gy-36 md:flex-jc-center">
+						<div class="md:col-3 col-6"><a class="doc-example" href="docs/index.pdf" target="_blank" title="Открыть пример PDF">
+								<picture>
+									<source type="image/webp" srcset="img/docs/index.webp">
+									<source type="image/png" srcset="img/docs/index.png"><img class="doc-example__img" alt="Пример документа с нумерацией страниц" src="img/docs/index.png">
+								</picture>
+							</a><a class="link d-inline-block mt-8 ml-8" href="docs/index.pdf" target="_blank">Открыть PDF</a></div>
+						<div class="md:col-3 col-6"><a class="doc-example" href="docs/account-statement.pdf" target="_blank" title="Открыть пример PDF">
+								<picture>
+									<source type="image/webp" srcset="img/docs/account-statement.webp">
+									<source type="image/png" srcset="img/docs/account-statement.png"><img class="doc-example__img" alt="Пример документа с изображением" src="img/docs/account-statement.png">
+								</picture>
+							</a><a class="link d-inline-block mt-8 ml-8" href="docs/account-statement.pdf" target="_blank">Открыть PDF</a></div>
+						<div class="md:col-3 col-6"><a class="doc-example" href="docs/payment-assignment.pdf" target="_blank" title="Открыть пример PDF">
+								<picture>
+									<source type="image/webp" srcset="img/docs/payment-assignment.webp">
+									<source type="image/png" srcset="img/docs/payment-assignment.png"><img class="doc-example__img" alt="Пример документа" src="img/docs/payment-assignment.png">
+								</picture>
+							</a><a class="link d-inline-block mt-8 ml-8" href="docs/payment-assignment.pdf" target="_blank">Открыть PDF</a></div>
+					</div>
+				</div>
+			</section>
+			<section class="section">
+				<div class="container">
+					<div class="row">
+						<div class="md:col-10 col-12 md:offset-1">
+							<h2 class="h2 section__heading" id="quick-start">Быстрый старт</h2>
+							<video class="video" controls="" title="Видео: быстрый старт">
+								<source src="../video/quick-start.mp4" type="video/mp4">
+								<source src="../video/quick-start.webm" type="video/webm">
+							</video>
+							<ol class="ol lh-xxl text-break md:mt-44 mt-28">
+								<li>Скачайте репозиторий <a class="link" href="https://github.com/ArtoriasVictrix/asap-pdf" rel="noopener">ASAP PDF;</a></li>
+								<li>В&nbsp;корневой папке проекта выполните <code class="code">npm i</code> или <code class="code">yarn</code>;</li>
+								<li>Запуск проекта:
+									<ul class="ul ul--point">
+										<li>Выполните <code class="code">npm start</code>, если вам нужно упаковывать все ресурсы в&nbsp;HTML и&nbsp;конвертировать получившийся
+											HTML&nbsp;в PDF на&nbsp;лету. Готовые PDF будут сохраняться в&nbsp;папке <code class="code">/dist/pdf/</code>. Вы&nbsp;можете открыть PDF-файл в&nbsp;своей IDE для того, чтобы сразу видеть результат
+											изменений в&nbsp;коде;
+										</li>
+										<li>Выполните <code class="code">npm run dev</code>, если вам не&nbsp;нужно упаковывать все ресурсы в&nbsp;HTML и&nbsp;конвертировать
+											получившийся HTML&nbsp;в PDF на&nbsp;лету. В&nbsp;этом режиме доступны sourcemaps;
+										</li>
+										<li>Проект запустится по адресу <code class="code">http://localhost:3004/index.html</code>;</li>
+									</ul>
+								</li>
+								<li>Создайте копию файла <code class="code">/app/pug/pages/index.pug</code> и назовите его так, как вам нужно;</li>
+								<li>Если необходимо, в папке <code class="code">/app/scss/pages/</code> создайте SCSS-файл стилей для новой страницы и подключите его к файлу <code class="code">/app/scss/_pages.scss</code>;</li>
+								<li>Пишите разметку в файле, созданном в пунке 4. Весь код должен быть написан внутри блока с классами <code class="code">.sheet.A4-m-15mm</code>;</li>
+								<li>Используйте готовые <a class="link" href="#">утилиты</a> и <a class="link" href="#">компоненты</a>;</li>
+								<li>Скомпилированные итоговые файлы проекта будут сохраняться в папке <code class="code">/dist/</code>.</li>
+							</ol>
+							<div class="row">
+								<div class="md:col-9 col-12">
+									<div class="info md:mt-44 mt-28">
+										<svg class="icon icon-info icon--cl icon--md info__icon">
+											<use xlink:href="/img/svg/icons.svg#info"></use>
+										</svg>
+										<p class="info__content">
+											Под упаковкой ресурсов в&nbsp;HTML подразумевается кодирование изображений и&nbsp;шрифтов
+											в&nbsp;base64 (как в&nbsp;HTML, так и&nbsp;в&nbsp;CSS), и&nbsp;вставка сжатого CSS в&nbsp;HTML
+											(в&nbsp;тег <code class="code">&lt;head&gt;</code>).
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section--light">
+				<div class="container">
+					<h2 class="h2 section__heading">Кто использует ASAP PDF?</h2><a class="d-block w-200 mx-auto" href="https://blanc.ru" title="Сайт ООО &quot;Бланк банк&quot;" rel="noopener">
+						<svg class="icon--cl">
+							<title>ООО &quot;Бланк банк&quot;</title>
+							<use xlink:href="/img/svg/icons.svg#blanc-ru"></use>
+						</svg></a>
+				</div>
+			</section>
+			<section class="section section--dark">
+				<div class="container">
+					<h2 class="h2 section__heading">Поддержка ASAP PDF</h2>
+					<div class="row">
+						<div class="md:col-6 col-12 md:offset-1">
+							<p class="md:pr-28 md:mt-44">ASAP PDF разрабатывается в&nbsp;свободное время небольшой дружной <a class="link link--violet" href="/team.html" title="ASAP PDF team">командой</a>. Нам будет приятно, если вы&nbsp;поддержите наш проект и&nbsp;мотивируете нас
+								к&nbsp;развитию проекта.
+							</p><a class="btn btn--primary md:mt-40 mt-32 ml-auto" href="#" rel="noopener">Поддержать проект
+								<svg class="icon icon-coffee-sm icon--lg ml-8">
+									<use xlink:href="/img/svg/icons.svg#coffee-sm"></use>
+								</svg></a>
+						</div>
+						<div class="md:col-4 md:d-block d-none">
+							<picture>
+								<source type="image/webp" srcset="img/dollar.webp">
+								<source type="image/png" srcset="img/dollar.png"><img class="d-block mx-auto w-100p max-w-360 h-auto mt-n16" alt="Иллюстрация" aria-hidden="true" src="img/dollar.png">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section--light">
+				<div class="container">
+					<div class="row">
+						<div class="md:col-10 col-12 md:offset-1">
+							<h2 class="h2 section__heading" id="features">Возможности</h2>
+							<div class="row row--gx-32 row--gy-40">
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-bootstrap icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#bootstrap"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Только нужное из&nbsp;Bootstrap&nbsp;5</h3>
+											<p class="feature__description text-sm">Знакомые всем <a class="link" href="https://getbootstrap.com/docs/5.1/utilities/api/" target="_blank">утилиты</a>, <a class="link" href="https://getbootstrap.com/docs/5.1/layout/columns/" target="_blank">колонки</a> и&nbsp;ничего лишнего</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-layers icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#layers"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Компоненты</h3>
+											<p class="feature__description text-sm"><a class="link" href="#">Библиотека</a> компонентов для вёрстки PDF</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-pdf icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#pdf"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Конвертация в&nbsp;PDF</h3>
+											<p class="feature__description text-sm">На&nbsp;лету (с&nbsp;помощью <a class="link" href="https://pptr.dev/" target="_blank" rel="noopener">Puppeteer</a>)</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-compression icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#compression"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Оптимизация изображений</h3>
+											<p class="feature__description text-sm">Все изображения оптимизируются в&nbsp;процессе сборки</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-base64 icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#base64"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Base64</h3>
+											<p class="feature__description text-sm">Кодирование ресурсов в&nbsp;Base64 и&nbsp;их&nbsp;вставка в&nbsp;HTML&nbsp;на лету</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-purgecss icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#purgecss"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Удаление неиспользуемого CSS</h3>
+											<p class="feature__description text-sm"><a class="link" href="https://purgecss.com/" target="_blank" rel="noopener">PurgeCSS</a> поможет избавиться от&nbsp;лишнего кода</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-pug icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#pug"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Pug</h3>
+											<p class="feature__description text-sm">Лаконичный и&nbsp;мощный <a class="link" href="https://pugjs.org/api/getting-started.html" target="_blank" rel="noopener">шаблонизатор HTML</a></p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-sass icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#sass"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">SCSS</h3>
+											<p class="feature__description text-sm">Пожалуй, лучший <a class="link" href="https://sass-lang.com/" target="_blank" rel="noopener">препроцессор для CSS</a></p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-linter icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#linter"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Линтинг SCSS и&nbsp;Pug</h3>
+											<p class="feature__description text-sm"><a class="link" href="https://stylelint.io/" target="_blank" rel="noopener">Stylelint</a> и&nbsp;<a class="link" href="https://github.com/pugjs/pug-lint" target="_blank" rel="noopener">pug-lint</a> помогут поддерживать единообразие в написании кода</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-json icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#json"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Мокирование данных</h3>
+											<p class="feature__description text-sm">Простейшее мокирование с&nbsp;подстановкой данных из&nbsp;JSON</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-check-circle icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#check-circle"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Тестирование</h3>
+											<p class="feature__description text-sm">Тестирование с&nbsp;подробным отчётом о&nbsp;результатах. <a class="link" href="#">О&nbsp;тестировании ASAP PDF</a></p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-storybook icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#storybook"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Исчерпывающая документация</h3>
+											<p class="feature__description text-sm">Подробная документация в&nbsp;формате <a class="link" href="#">Storybook</a></p>
+										</div>
+									</article>
+								</div>
+							</div>
+							<div class="row">
+								<div class="md:col-9 col-12">
+									<div class="info mt-44">
+										<svg class="icon icon-info icon--cl icon--md info__icon">
+											<use xlink:href="/img/svg/icons.svg#info"></use>
+										</svg>
+										<p class="info__content">В&nbsp;ASAP PDF для конвертирования HTML&nbsp;в PDF используется <a class="link" href="https://pptr.dev/" target="_blank" rel="noopener">Puppeteer</a>, поэтому для получения таких&nbsp;же результатов конвертирования на&nbsp;стороне BackEnd
+											рекомендуется использовать <a class="link" href="https://www.puppeteersharp.com/" target="_blank" rel="noopener">Puppeteer Sharp.</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container container">
+				<div class="row">
+					<div class="col-12 order-1 xl:col-3 lg:col-4 sm:col-6 lg:mb-0 mb-36"><a class="footer__logo" href="/"><img class="logo" src="/img/logo.svg" alt="Логотип ASAP PDF" width="152" height="32"></a>
+						<div class="text-sm mt-32 sm:mt-24">
+							<p>Разработано <a class="link" href="team.html">командой ASAP PDF </a><br class="sm:d-block d-none">на&nbsp;базе <a class="link" href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap v5.1.3</a>.</p>
+							<p class="mt-12">Код под лицензией: <a class="link" href="#" target="_blank">MIT</a>,</p>
+							<p>Документация: Storybook <a class="link" href="https://storybook.js.org/" target="_blank" rel="noopener">v6.3.12</a>,</p>
+							<p>Иконки на сайте: <a class="link" href="https://feathericons.com/" target="_blank" rel="noopener">Feather icons</a>.</p>
+							<p class="mt-12">Текущая версия v1.0.0.</p>
+						</div>
+					</div>
+					<div class="lg:col-2 sm:col-6 col-12 sm:order-3 order-2">
+						<nav class="footer__navigation">
+							<h3 class="footer__menu-heading">Ссылки</h3>
+							<ul class="footer__menu">
+								<li class="footer__menu-item"><a class="footer__link" href="#about">О&nbsp;фреймворке</a></li>
+								<li class="footer__menu-item"><a class="footer__link" href="#quick-start">Быстрый старт</a></li>
+								<li class="footer__menu-item"><a class="footer__link" href="#features">Возможности</a></li>
+								<li class="footer__menu-item"><a class="footer__link" href="#" target="_blank">Документация</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="lg:col-2 sm:col-6 col-12 sm:order-4 order-3 sm:mt-0 mt-36">
+						<nav class="footer__navigation">
+							<h3 class="footer__menu-heading">Сообщество</h3>
+							<ul class="footer__menu">
+								<li class="footer__menu-item"><a class="footer__link" href="https://github.com/ArtoriasVictrix/asap-pdf/issues" target="_blank" rel="noopener">Вопросы</a></li>
+								<li class="footer__menu-item"><a class="footer__link" href="https://github.com/ArtoriasVictrix/asap-pdf/discussions" target="_blank" rel="noopener">Обсуждение</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="lg:col-4 sm:col-6 col-12 xl:offset-1 lg:order-4 sm:order-2 order-4  lg:mt-0 mt-44">
+						<div class="d-flex lg:flex-jc-end flex-wrap">
+							<div class="dropdown mr-24 mb-24">
+								<button class="dropdown__toggle" id="dropdownFooter" href="en/index.html" aria-expanded="false">
+									<svg class="icon icon-russia icon--cl icon--md mr-4">
+										<use xlink:href="/img/svg/icons.svg#russia"></use>
+									</svg>Русский
+									<svg class="icon icon-chevron-up dropdown__icon">
+										<use xlink:href="/img/svg/icons.svg#chevron-up"></use>
+									</svg>
+								</button>
+								<ul class="dropdown__menu" aria-labelledby="dropdownFooter">
+									<li class="dropdown__item"><a class="dropdown__link" href="en/index.html">
+											<svg class="icon icon-united-states icon--cl icon--md mr-4">
+												<use xlink:href="/img/svg/icons.svg#united-states"></use>
+											</svg>English</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="index.html">
+											<svg class="icon icon-russia icon--cl icon--md mr-4">
+												<use xlink:href="/img/svg/icons.svg#russia"></use>
+											</svg>Русский</a></li>
+								</ul>
+							</div>
+							<div class="d-grid grid-af-col gap-12 mb-24"><a class="btn btn--ghost btn--rounded" href="#" target="_blank" aria-label="ASAP PDF в Telegram" rel="noopener">
+									<svg class="icon icon-telegram icon--lg">
+										<use xlink:href="/img/svg/icons.svg#telegram"></use>
+									</svg></a><a class="btn btn--ghost btn--rounded" href="#" target="_blank" aria-label="ASAP PDF в Twitter" rel="noopener">
+									<svg class="icon icon-twitter icon--lg">
+										<use xlink:href="/img/svg/icons.svg#twitter"></use>
+									</svg></a><a class="btn btn--ghost btn--rounded" href="https://github.com/ArtoriasVictrix/asap-pdf" target="_blank" aria-label="ASAP PDF на GitHub" rel="noopener">
+									<svg class="icon icon-github icon--lg">
+										<use xlink:href="/img/svg/icons.svg#github"></use>
+									</svg></a></div>
+						</div>
+						<div class="d-flex"><a class="btn btn--primary btn--sm lg:ml-auto" href="#" target="_blank" rel="noopener">Поддержать проект
+								<svg class="icon icon-coffee-sm icon--md ml-4">
+									<use xlink:href="/img/svg/icons.svg#coffee-sm"></use>
+								</svg></a></div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

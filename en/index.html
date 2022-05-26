@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="asap">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+	<link rel="manifest" href="../favicon/site.webmanifest">
+	<link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#4f2ed2">
+	<link rel="shortcut icon" href="../favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-config" content="../favicon/browserconfig.xml">
+	<meta name="theme-color" content="#4f2ed2">
+	<meta name="author" content="Nikolay Zhidkov and ASAP PDF developers">
+	<title>ASAP PDF - Framework for PDF layout</title>
+	<meta name="description" content="The first open-source framework for PDF layout">
+	<meta property="og:url" content="https://asap-pdf.com/">
+	<meta property="og:title" content="ASAP PDF">
+	<meta property="og:description" content="The first open-source framework for PDF layout">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://asap-pdf.com/img/asap-pdf-social.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1000">
+	<meta property="og:image:height" content="500">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../libs/css-vars-ponyfill/css-vars-ponyfill.min.js"></script>
+	<script src="../libs/svg4everybody/svg4everybody.min.js"></script>
+	<script>
+		svg4everybody({
+			// To support gradients
+			polyfill: true
+		});
+
+		// Настройки полифилла CSS Custom Properties
+		cssVars({
+			shadowDOM: true,
+		});
+	</script>
+</head>
+
+<body>
+	<div class="root">
+		<header class="header">
+			<nav class="header__container container"><a class="header__logo" href="/en/index.html"><img class="logo" src="../img/logo.svg" alt="ASAP PDF logo" width="152" height="32"></a>
+				<div class="header__navigation" id="headerNavigation">
+					<ul class="header__menu">
+						<li class="header__menu-item"><a class="header__link" href="#about">About</a></li>
+						<li class="header__menu-item"><a class="header__link" href="#quick-start">Quick start</a></li>
+						<li class="header__menu-item"><a class="header__link" href="#features">Features</a></li>
+						<li class="header__menu-item"><a class="header__link" href="#" target="_blank">Docs</a></li>
+					</ul>
+					<hr class="hr header__hr">
+					<ul class="header__menu header__menu--actions">
+						<li class="header__menu-item">
+							<div class="dropdown">
+								<button class="dropdown__toggle" id="dropdown" href="/index.html" aria-expanded="false">
+									<svg class="icon icon-united-states icon--cl icon--md mr-4">
+										<use xlink:href="/img/svg/icons.svg#united-states"></use>
+									</svg>English
+									<svg class="icon icon-chevron-up dropdown__icon">
+										<use xlink:href="/img/svg/icons.svg#chevron-up"></use>
+									</svg>
+								</button>
+								<ul class="dropdown__menu" aria-labelledby="dropdown">
+									<li class="dropdown__item"><a class="dropdown__link" href="/en/index.html">
+											<svg class="icon icon-united-states icon--cl icon--md mr-4">
+												<use xlink:href="/img/svg/icons.svg#united-states"></use>
+											</svg>English</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="/index.html">
+											<svg class="icon icon-russia icon--cl icon--md mr-4">
+												<use xlink:href="/img/svg/icons.svg#russia"></use>
+											</svg>Русский</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="header__menu-item"><a class="btn btn--ghost btn--rounded" href="https://github.com/ArtoriasVictrix/asap-pdf" target="_blank" title="GitHub" rel="noopener">
+								<svg class="icon icon-github icon--lg">
+									<use xlink:href="/img/svg/icons.svg#github"></use>
+								</svg></a></li>
+						<li class="header__menu-item"><a class="btn btn--primary fz-xs" href="https://github.com/ArtoriasVictrix/asap-pdf" rel="noopener">Download</a></li>
+					</ul>
+				</div>
+				<div class="header__burger">
+					<button class="btn btn--ghost btn--sm" id="headerMenuBtn" type="button" aria-controls="headerNavigation" aria-expanded="true" aria-label="Toggle navigation">
+						<svg class="icon icon-menu icon--md">
+							<use xlink:href="/img/svg/icons.svg#menu"></use>
+						</svg>
+					</button>
+				</div>
+			</nav>
+		</header>
+		<main class="main">
+			<section class="section hero">
+				<div class="container">
+					<div class="row">
+						<div class="lg:col-6 col-12">
+							<div class="hero__content">
+								<h1 class="h1 text-primary ta-c lg:ta-l">ASAP PDF</h1>
+								<p class="h4 ta-c lg:ta-l lg:max-w-none md:max-w-340 max-w-300 lg:mx-0 mx-auto mt-16">The first framework for fast <br class="d-none lg:d-block">and easy PDF layout</p>
+								<div class="d-flex lg:flex-jc-start flex-jc-center mt-32"><a class="btn btn--primary lg:btn--lg" href="#">Download</a><a class="btn btn--ghost lg:btn--lg ml-12" href="#">Get started</a></div>
+								<p class="text-xs text-light fw-b lg:ta-l ta-c mt-20">Currently 1.0.0</p>
+							</div>
+						</div>
+						<div class="lg:col-6 col-12 d-flex flex-jc-center">
+							<picture class="hero__picture">
+								<source type="image/webp" srcset="../img/hero-doc.webp">
+								<source type="image/png" srcset="../img/hero-doc.png"><img class="img-fluid hero__img" src="../img/hero-doc.png" alt="ASAP PDF example" width="608" height="536">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section--light">
+				<div class="container">
+					<div class="row">
+						<div class="md:col-10 col-12 md:offset-1">
+							<h2 class="h2 section__heading" id="about">About</h2>
+							<video class="video" controls="" title="Framework demo">
+								<source src="../video/vscode-demo.mp4" type="video/mp4">
+								<source src="../video/vscode-demo.webm" type="video/webm">
+							</video>
+							<div class="md:mt-44 mt-28">
+								<p>
+									ASAP PDF is designed for PDF files creation using HTML and CSS (Pug/SCSS).
+									With ASAP PDF you can:
+								</p>
+								<ul class="ul ul--point">
+									<li>Convert HTML to PDF on the fly;</li>
+									<li>Preview in browser the result which is close to the final PDF file;</li>
+									<li>
+										Inline all external assets to your HTML without using third-party services (your
+										images and fonts are encoded with base64, and styles are automatically inserted into
+										the <code class="code">&lt;head&gt;</code> tag);
+									</li>
+									<li>Use ready-made text components;</li>
+									<li>Reuse your components (thanks to Pug);</li>
+									<li>Stop worrying about stylelint or pug-lint config as they are already configured;</li>
+									<li>
+										Perform screenshot testing of your project and get a detailed report.
+
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="h3 section__subheading">Examples</div>
+					<div class="row row--gx-24 md:row--gy-0 row--gy-36 md:flex-jc-center">
+						<div class="md:col-3 col-6"><a class="doc-example" href="docs/index.pdf" target="_blank" title="Open PDF">
+								<picture>
+									<source type="image/webp" srcset="../img/docs/index.webp">
+									<source type="image/png" srcset="../img/docs/index.png"><img class="doc-example__img" alt="PDF with pagination" src="../img/docs/index.png">
+								</picture>
+							</a><a class="link d-inline-block mt-8 ml-8" href="../docs/index.pdf" target="_blank">Open PDF</a></div>
+						<div class="md:col-3 col-6"><a class="doc-example" href="docs/account-statement.pdf" target="_blank" title="Open PDF">
+								<picture>
+									<source type="image/webp" srcset="../img/docs/account-statement.webp">
+									<source type="image/png" srcset="../img/docs/account-statement.png"><img class="doc-example__img" alt="PDF with images" src="../img/docs/account-statement.png">
+								</picture>
+							</a><a class="link d-inline-block mt-8 ml-8" href="../docs/account-statement.pdf" target="_blank">Open PDF</a></div>
+						<div class="md:col-3 col-6"><a class="doc-example" href="docs/payment-assignment.pdf" target="_blank" title="Open PDF">
+								<picture>
+									<source type="image/webp" srcset="../img/docs/payment-assignment.webp">
+									<source type="image/png" srcset="../img/docs/payment-assignment.png"><img class="doc-example__img" alt="Document example" src="../img/docs/payment-assignment.png">
+								</picture>
+							</a><a class="link d-inline-block mt-8 ml-8" href="../docs/payment-assignment.pdf" target="_blank">Open PDF</a></div>
+					</div>
+				</div>
+			</section>
+			<section class="section">
+				<div class="container">
+					<div class="row">
+						<div class="md:col-10 col-12 md:offset-1">
+							<h2 class="h2 section__heading" id="quick-start">Quick start</h2>
+							<video class="video" controls="" title="Quick start video guide">
+								<source src="../video/quick-start.mp4" type="video/mp4">
+								<source src="../video/quick-start.webm" type="video/webm">
+							</video>
+							<ol class="ol lh-xxl text-break md:mt-44 mt-28">
+								<li>Download the <a class="link" href="https://github.com/ArtoriasVictrix/asap-pdf" rel="noopener">ASAP PDF </a>repository;</li>
+								<li>In the project root folder run <code class="code">npm i</code> or <code class="code">yarn</code>;</li>
+								<li>To start the project:
+									<ul class="ul ul--point">
+										<li>Run <code class="code">npm start</code> if you need to inline all external assets to HTML and convert the final HTML to
+											PDF on the fly. The final PDFs will be saved in the folder <code class="code">/dist/pdf/</code>. You can open these PDFs in your IDE to see the result of code changes
+											immediately;
+										</li>
+										<li>Run <code class="code">npm run dev</code> if you don't need to inline all external assets to HTML and convert the final
+											HTML to PDF on the fly. In this mode Sourcemaps are available;
+										</li>
+										<li>The project will start at <code class="code">http://localhost:3004/index.html</code>;</li>
+									</ul>
+								</li>
+								<li>Make a copy of the file <code class="code">/app/pug/pages/index.pug</code> and name it whatever you need;</li>
+								<li>Create a SCSS file for the new page in the folder <code class="code">/app/scss/pages/</code> and import it in the file <code class="code">/app/scss/_pages.scss</code>, if needed;</li>
+								<li>
+									Write a markup in the file created in step 4. All the code should be written inside the block with <code class="code">.sheet.A4-m-15mm</code> classes;</li>
+								<li>Use ready-made <a class="link" href="#">utilities</a> and <a class="link" href="#">components</a>;</li>
+								<li>The compiled project files will be saved in the <code class="code">/dist/</code> folder.</li>
+							</ol>
+							<div class="row">
+								<div class="md:col-9 col-12">
+									<div class="info md:mt-44 mt-28">
+										<svg class="icon icon-info icon--cl icon--md info__icon">
+											<use xlink:href="/img/svg/icons.svg#info"></use>
+										</svg>
+										<p class="info__content">
+											Inlining of an external files to HTML means encoding images and fonts with base64
+											and inserting them into HTML (into the <code class="code">&lt;head&gt;</code> tag).
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section--light">
+				<div class="container">
+					<h2 class="h2 section__heading">Who's using ASAP PDF?</h2><a class="d-block w-200 mx-auto" href="https://blanc.ru" title="Blanc bank website" rel="noopener">
+						<svg class="icon--cl">
+							<title>Blanc bank</title>
+							<use xlink:href="/img/svg/icons.svg#blanc"></use>
+						</svg></a>
+				</div>
+			</section>
+			<section class="section section--dark">
+				<div class="container">
+					<h2 class="h2 section__heading">Support ASAP PDF</h2>
+					<div class="row">
+						<div class="md:col-6 col-12 md:offset-1">
+							<p class="md:pr-28 md:mt-44">ASAP PDF is developed by our small friendly <a class="link link--violet" href="/en/team.html" title="ASAP PDF team">team</a>, who work on the project in our free time. We will appreciate if you support ASAP PDF
+								and motivate us to develop it.
+							</p><a class="btn btn--primary md:mt-40 mt-32 ml-auto" href="#" rel="noopener">Donate
+								<svg class="icon icon-coffee-sm icon--lg ml-8">
+									<use xlink:href="/img/svg/icons.svg#coffee-sm"></use>
+								</svg></a>
+						</div>
+						<div class="md:col-4 md:d-block d-none">
+							<picture>
+								<source type="image/webp" srcset="../img/dollar.webp">
+								<source type="image/png" srcset="../img/dollar.png"><img class="d-block mx-auto w-100p max-w-360 h-auto mt-n16" alt="Illustration" aria-hidden="true" src="../img/dollar.png">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section section--light">
+				<div class="container">
+					<div class="row">
+						<div class="md:col-10 col-12 md:offset-1">
+							<h2 class="h2 section__heading" id="features">Features</h2>
+							<div class="row row--gx-32 row--gy-40">
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-bootstrap icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#bootstrap"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Just what you need from Bootstrap 5</h3>
+											<p class="feature__description text-sm">Familiar <a class="link" href="https://getbootstrap.com/docs/5.1/utilities/api/" target="_blank">utilities</a>, <a class="link" href="https://getbootstrap.com/docs/5.1/layout/columns/" target="_blank">columns,</a> and nothing more</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-layers icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#layers"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Ready-made components</h3>
+											<p class="feature__description text-sm"><a class="link" href="#">Library of components </a>for PDF layout</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-pdf icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#pdf"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Converting HTML to PDF</h3>
+											<p class="feature__description text-sm">On the fly (using <a class="link" href="https://pptr.dev/" target="_blank" rel="noopener">Puppeteer</a>)</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-compression icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#compression"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Image compression</h3>
+											<p class="feature__description text-sm">All images are optimized during the project assembly</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-base64 icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#base64"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Base64</h3>
+											<p class="feature__description text-sm">Assets are encoded with base64 and inserted to the HTML on the fly</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-purgecss icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#purgecss"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">PurgeCSS</h3>
+											<p class="feature__description text-sm"><a class="link" href="https://purgecss.com/" target="_blank" rel="noopener">PurgeCSS</a> will help you get rid of unnecessary CSS</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-pug icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#pug"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Pug</h3>
+											<p class="feature__description text-sm">Elegant and powerful <a class="link" href="https://pugjs.org/api/getting-started.html" target="_blank" rel="noopener">HTML templating engine</a></p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-sass icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#sass"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">SCSS</h3>
+											<p class="feature__description text-sm">Probably the best <a class="link" href="https://sass-lang.com/" target="_blank" rel="noopener">CSS preprocessor</a></p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-linter icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#linter"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">SCSS and Pug linters</h3>
+											<p class="feature__description text-sm"><a class="link" href="https://stylelint.io/" target="_blank" rel="noopener">Stylelint</a> and <a class="link" href="https://github.com/pugjs/pug-lint" target="_blank" rel="noopener">pug-lint</a> help your team maintain consistent code style</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-json icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#json"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Mock data</h3>
+											<p class="feature__description text-sm">Simplest mocking with data substitution from JSON</p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-check-circle icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#check-circle"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Testing</h3>
+											<p class="feature__description text-sm">Testing with detailed reports. <a class="link" href="#">Read about ASAP PDF testing</a></p>
+										</div>
+									</article>
+								</div>
+								<div class="md:col-6 col-12">
+									<article class="feature">
+										<svg class="icon icon-storybook icon--cl md:icon--xxl icon--xl feature__icon">
+											<use xlink:href="/img/svg/icons.svg#storybook"></use>
+										</svg>
+										<div class="feature__content">
+											<h3 class="h5 feature__heading">Detailed documentation</h3>
+											<p class="feature__description text-sm">Comprehensive documentation in a <a class="link" href="#">Storybook</a> format</p>
+										</div>
+									</article>
+								</div>
+							</div>
+							<div class="row">
+								<div class="md:col-9 col-12">
+									<div class="info mt-44">
+										<svg class="icon icon-info icon--cl icon--md info__icon">
+											<use xlink:href="/img/svg/icons.svg#info"></use>
+										</svg>
+										<p class="info__content">ASAP PDF uses <a class="link" href="https://pptr.dev/" target="_blank" rel="noopener">Puppeteer </a>to convert HTML to PDF, so it is recommended to use <a class="link" href="https://www.puppeteersharp.com/" target="_blank" rel="noopener">Puppeteer Sharp </a>to get the same conversion results on the backend.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container container">
+				<div class="row">
+					<div class="col-12 order-1 xl:col-3 lg:col-4 sm:col-6 lg:mb-0 mb-36"><a class="footer__logo" href="/en/index.html"><img class="logo" src="../img/logo.svg" alt="ASAP PDF logo" width="152" height="32"></a>
+						<div class="text-sm mt-32 sm:mt-24">
+							<p>Designed and built by the <br class="sm:d-block d-none"><a class="link" href="team.html">ASAP PDF team</a>. <br class="sm:d-block d-none">Based on <a class="link" href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap v5.1.3</a>.</p>
+							<p class="mt-12">Code licensed: <a class="link" href="#" target="_blank">MIT</a>,</p>
+							<p>Docs: Storybook <a class="link" href="https://storybook.js.org/" target="_blank" rel="noopener">v6.3.12</a>,</p>
+							<p>Icons: <a class="link" href="https://feathericons.com/" target="_blank" rel="noopener">Feather icons</a>.</p>
+							<p class="mt-12">Currently v1.0.0.</p>
+						</div>
+					</div>
+					<div class="lg:col-2 sm:col-6 col-12 sm:order-3 order-2">
+						<nav class="footer__navigation">
+							<h3 class="footer__menu-heading">Links</h3>
+							<ul class="footer__menu">
+								<li class="footer__menu-item"><a class="footer__link" href="#about">About</a></li>
+								<li class="footer__menu-item"><a class="footer__link" href="#quick-start">Quick start</a></li>
+								<li class="footer__menu-item"><a class="footer__link" href="#features">Features</a></li>
+								<li class="footer__menu-item"><a class="footer__link" href="#" target="_blank">Docs</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="lg:col-2 sm:col-6 col-12 sm:order-4 order-3 sm:mt-0 mt-36">
+						<nav class="footer__navigation">
+							<h3 class="footer__menu-heading">Community</h3>
+							<ul class="footer__menu">
+								<li class="footer__menu-item"><a class="footer__link" href="https://github.com/ArtoriasVictrix/asap-pdf/issues" target="_blank" rel="noopener">Issues</a></li>
+								<li class="footer__menu-item"><a class="footer__link" href="https://github.com/ArtoriasVictrix/asap-pdf/discussions" target="_blank" rel="noopener">Discussions</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="lg:col-4 sm:col-6 col-12 xl:offset-1 lg:order-4 sm:order-2 order-4  lg:mt-0 mt-44">
+						<div class="d-flex lg:flex-jc-end flex-wrap">
+							<div class="dropdown mr-24 mb-24">
+								<button class="dropdown__toggle" id="dropdownFooter" href="/en/index.html" aria-expanded="false">
+									<svg class="icon icon-united-states icon--cl icon--md mr-4">
+										<use xlink:href="/img/svg/icons.svg#united-states"></use>
+									</svg>English
+									<svg class="icon icon-chevron-up dropdown__icon">
+										<use xlink:href="/img/svg/icons.svg#chevron-up"></use>
+									</svg>
+								</button>
+								<ul class="dropdown__menu" aria-labelledby="dropdownFooter">
+									<li class="dropdown__item"><a class="dropdown__link" href="/en/index.html">
+											<svg class="icon icon-united-states icon--cl icon--md mr-4">
+												<use xlink:href="/img/svg/icons.svg#united-states"></use>
+											</svg>English</a></li>
+									<li class="dropdown__item"><a class="dropdown__link" href="/index.html">
+											<svg class="icon icon-russia icon--cl icon--md mr-4">
+												<use xlink:href="/img/svg/icons.svg#russia"></use>
+											</svg>Русский</a></li>
+								</ul>
+							</div>
+							<div class="d-grid grid-af-col gap-12 mb-24"><a class="btn btn--ghost btn--rounded" href="#" target="_blank" aria-label="Telegram" rel="noopener">
+									<svg class="icon icon-telegram icon--lg">
+										<use xlink:href="/img/svg/icons.svg#telegram"></use>
+									</svg></a><a class="btn btn--ghost btn--rounded" href="#" target="_blank" aria-label="Twitter" rel="noopener">
+									<svg class="icon icon-twitter icon--lg">
+										<use xlink:href="/img/svg/icons.svg#twitter"></use>
+									</svg></a><a class="btn btn--ghost btn--rounded" href="https://github.com/ArtoriasVictrix/asap-pdf" target="_blank" aria-label="GitHub" rel="noopener">
+									<svg class="icon icon-github icon--lg">
+										<use xlink:href="/img/svg/icons.svg#github"></use>
+									</svg></a></div>
+						</div>
+						<div class="d-flex"><a class="btn btn--primary btn--sm lg:ml-auto" href="#" target="_blank" rel="noopener">Donate
+								<svg class="icon icon-coffee-sm icon--md ml-4">
+									<use xlink:href="/img/svg/icons.svg#coffee-sm"></use>
+								</svg></a></div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="../js/app.js"></script>
+</body>
+
+</html>
