@@ -3091,6 +3091,51 @@ a {
 .h-300 {
   height: 300px!important
 }
+.min-h-4 {
+  min-height: 4px!important
+}
+.min-h-8 {
+  min-height: 8px!important
+}
+.min-h-12 {
+  min-height: 12px!important
+}
+.min-h-16 {
+  min-height: 16px!important
+}
+.min-h-20 {
+  min-height: 20px!important
+}
+.min-h-24 {
+  min-height: 24px!important
+}
+.min-h-28 {
+  min-height: 28px!important
+}
+.min-h-32 {
+  min-height: 32px!important
+}
+.min-h-36 {
+  min-height: 36px!important
+}
+.min-h-40 {
+  min-height: 40px!important
+}
+.min-h-44 {
+  min-height: 44px!important
+}
+.min-h-48 {
+  min-height: 48px!important
+}
+.min-h-52 {
+  min-height: 52px!important
+}
+.min-h-56 {
+  min-height: 56px!important
+}
+.min-h-60 {
+  min-height: 60px!important
+}
 .min-h-300 {
   min-height: 300px!important
 }
@@ -4306,6 +4351,12 @@ a {
 }
 .ta-c {
   text-align: center!important
+}
+.ti-0 {
+  text-indent: 0!important
+}
+.ti-0-5em {
+  text-indent: .5em!important
 }
 .ti-1em {
   text-indent: 1em!important
