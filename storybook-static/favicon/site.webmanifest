@@ -1,6 +1,6 @@
 {
-    "name": "Markup.PDF",
-    "short_name": "Markup.PDF",
+    "name": "ASAP PDF",
+    "short_name": "ASAP PDF",
     "icons": [
         {
             "src": "/favicon/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#4f2ed2",
+    "background_color": "#4f2ed2",
     "display": "standalone"
 }
