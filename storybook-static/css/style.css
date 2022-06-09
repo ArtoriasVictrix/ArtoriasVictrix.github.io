@@ -92,9 +92,8 @@
   --cl-yellow-400: rgb(var(--yellow-400));
   --cl-yellow-500: rgb(var(--yellow-500));
   --cl-yellow-600: rgb(var(--yellow-600));
-  --ca-gray-10-30: rgba(var(--gray-10), 0.3);
-  --ca-gray-30-50: rgba(var(--gray-30), 0.5);
-  --ca-gray-70-0: rgba(var(--gray-70), 0)
+  --ca-gray-100-30: rgba(var(--gray-100), 0.3);
+  --ca-gray-300-50: rgba(var(--gray-300), 0.5)
 }
 :root[data-theme=asap] {
   --ff-nunito-sans: "Nunito Sans","Helvetica Neue","Arial",sans-serif;
@@ -281,6 +280,16 @@ body {
 h1 {
   margin: .67em 0;
   font-size: 2em
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0
 }
 hr {
   height: 0;
@@ -1245,7 +1254,7 @@ a {
 }
 .logo {
   width: 100%;
-  max-width: 80px;
+  max-width: 152px;
   height: auto
 }
 .stamp {
@@ -2865,70 +2874,70 @@ a {
   min-width: 136px!important
 }
 .max-w-0 {
-  width: 0!important
+  max-width: 0!important
 }
 .max-w-5p {
-  width: 5%!important
+  max-width: 5%!important
 }
 .max-w-10p {
-  width: 10%!important
+  max-width: 10%!important
 }
 .max-w-15p {
-  width: 15%!important
+  max-width: 15%!important
 }
 .max-w-20p {
-  width: 20%!important
+  max-width: 20%!important
 }
 .max-w-25p {
-  width: 25%!important
+  max-width: 25%!important
 }
 .max-w-30p {
-  width: 30%!important
+  max-width: 30%!important
 }
 .max-w-35p {
-  width: 35%!important
+  max-width: 35%!important
 }
 .max-w-40p {
-  width: 40%!important
+  max-width: 40%!important
 }
 .max-w-45p {
-  width: 45%!important
+  max-width: 45%!important
 }
 .max-w-50p {
-  width: 50%!important
+  max-width: 50%!important
 }
 .max-w-55p {
-  width: 55%!important
+  max-width: 55%!important
 }
 .max-w-60p {
-  width: 60%!important
+  max-width: 60%!important
 }
 .max-w-65p {
-  width: 65%!important
+  max-width: 65%!important
 }
 .max-w-70p {
-  width: 70%!important
+  max-width: 70%!important
 }
 .max-w-75p {
-  width: 75%!important
+  max-width: 75%!important
 }
 .max-w-80p {
-  width: 80%!important
+  max-width: 80%!important
 }
 .max-w-85p {
-  width: 85%!important
+  max-width: 85%!important
 }
 .max-w-90p {
-  width: 90%!important
+  max-width: 90%!important
 }
 .max-w-95p {
-  width: 95%!important
+  max-width: 95%!important
 }
 .max-w-100p {
-  width: 100%!important
+  max-width: 100%!important
 }
 .max-w-none {
-  width: none!important
+  max-width: none!important
 }
 .max-w-4 {
   max-width: 4px!important
@@ -3187,6 +3196,9 @@ a {
 }
 .h-300 {
   height: 300px!important
+}
+.min-h-0 {
+  min-height: 0!important
 }
 .min-h-4 {
   min-height: 4px!important
