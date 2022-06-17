@@ -114,7 +114,7 @@
 								<h1 class="h1 text-primary ta-c lg:ta-l">ASAP PDF</h1>
 								<p class="h4 ta-c lg:ta-l lg:max-w-none md:max-w-340 max-w-300 lg:mx-0 mx-auto mt-16">The first framework for fast <br class="d-none lg:d-block">and easy PDF layout</p>
 								<div class="d-flex lg:flex-jc-start flex-jc-center mt-32"><a class="btn btn--primary lg:btn--lg" href="#">Download</a><a class="btn btn--ghost lg:btn--lg ml-12" href="#">Get started</a></div>
-								<p class="text-xs text-light fw-b lg:ta-l ta-c mt-20">Currently 1.0.0</p>
+								<p class="text-xs text-light fw-b lg:ta-l ta-c mt-20">Currently 1.0.0, Node 14.15.0+</p>
 							</div>
 						</div>
 						<div class="lg:col-6 col-12 d-flex flex-jc-center">
@@ -137,20 +137,23 @@
 							</video>
 							<div class="md:mt-44 mt-28">
 								<p>
-									ASAP PDF is designed for PDF files creation using HTML and CSS (Pug/SCSS).
-									With ASAP PDF you can:
+									ASAP PDF is designed to create PDF files using HTML and CSS (Pug/SCSS).
+									With ASAP PDF, you can:
 								</p>
 								<ul class="ul ul--point">
 									<li>Convert HTML to PDF on the fly;</li>
-									<li>Preview in browser the result which is close to the final PDF file;</li>
+									<li>
+										Get an in-browser preview that’s nearly identical
+										to the final PDF file;
+									</li>
 									<li>
 										Inline all external assets to your HTML without using third-party services (your
 										images and fonts are encoded with base64, and styles are automatically inserted into
 										the <code class="code">&lt;head&gt;</code> tag);
 									</li>
 									<li>Use ready-made text components;</li>
-									<li>Reuse your components (thanks to Pug);</li>
-									<li>Stop worrying about stylelint or pug-lint config as they are already configured;</li>
+									<li>Reuse your components with Pug;</li>
+									<li>Stop worrying about stylelint or pug-lint config, as they are already configured;</li>
 									<li>
 										Perform screenshot testing of your project and get a detailed report.
 
@@ -191,9 +194,14 @@
 								<source src="video/quick-start.mp4" type="video/mp4">
 								<source src="video/quick-start.webm" type="video/webm">
 							</video>
-							<ol class="ol lh-xxl text-break md:mt-44 mt-28">
+							<h3 class="h5 md:mt-44 mt-28 mb-0">Requirements:</h3>
+							<ul class="ul ul--point text-break mt-20">
+								<li>Node v14.15.0 or higher</li>
+							</ul>
+							<h3 class="h5 mt-28 mb-0">Quick start guide:</h3>
+							<ol class="ol lh-xxl text-break mt-20">
 								<li>Download the <a class="link" href="https://github.com/ArtoriasVictrix/asap-pdf" rel="noopener">ASAP PDF </a>repository;</li>
-								<li>In the project root folder run <code class="code">npm i</code> or <code class="code">yarn</code>;</li>
+								<li>In the project root folder, run <code class="code">npm i</code>;</li>
 								<li>To start the project:
 									<ul class="ul ul--point">
 										<li>Run <code class="code">npm start</code> if you need to inline all external assets to HTML and convert the final HTML to
@@ -201,7 +209,7 @@
 											immediately;
 										</li>
 										<li>Run <code class="code">npm run dev</code> if you don't need to inline all external assets to HTML and convert the final
-											HTML to PDF on the fly. In this mode Sourcemaps are available;
+											HTML to PDF on the fly. Sourcemaps are available in this mode;
 										</li>
 										<li>The project will start at <code class="code">http://localhost:3004/index.html</code>;</li>
 									</ul>
@@ -209,7 +217,7 @@
 								<li>Make a copy of the file <code class="code">/app/pug/pages/index.pug</code> and name it whatever you need;</li>
 								<li>Create a SCSS file for the new page in the folder <code class="code">/app/scss/pages/</code> and import it in the file <code class="code">/app/scss/_pages.scss</code>, if needed;</li>
 								<li>
-									Write a markup in the file created in step 4. All the code should be written inside the block with <code class="code">.sheet.A4-m-15mm</code> classes;</li>
+									Write markup in the file created in step 4. All the code should be written inside the block with <code class="code">.sheet.A4-m-15mm</code> classes;</li>
 								<li>Use ready-made <a class="link" href="#">utilities</a> and <a class="link" href="#">components</a>;</li>
 								<li>The compiled project files will be saved in the <code class="code">/dist/</code> folder.</li>
 							</ol>
@@ -220,8 +228,8 @@
 											<use xlink:href="/img/svg/icons.svg#info"></use>
 										</svg>
 										<p class="info__content">
-											Inlining of an external files to HTML means encoding images and fonts with base64
-											and inserting them into HTML (into the <code class="code">&lt;head&gt;</code> tag).
+											Resource inlining in HTML means base64 encoding of images and fonts (in both HTML
+											and CSS), and embedding compressed CSS in HTML (into the <code class="code">&lt;head&gt;</code> tag).
 										</p>
 									</div>
 								</div>
@@ -244,7 +252,7 @@
 					<h2 class="h2 section__heading">Support ASAP PDF</h2>
 					<div class="row">
 						<div class="md:col-6 col-12 md:offset-1">
-							<p class="md:pr-28 md:mt-44">ASAP PDF is developed by our small friendly <a class="link link--violet" href="/en/team.html" title="ASAP PDF team">team</a>, who work on the project in our free time. We will appreciate if you support ASAP PDF
+							<p class="md:pr-28 md:mt-44">ASAP PDF is developed by our small, friendly <a class="link link--violet" href="/en/team.html" title="ASAP PDF team">team</a>; we work on the project in our free time. We would appreciate it if you support ASAP PDF
 								and motivate us to develop it.
 							</p>
 							<div class="md:mt-20 mt-16 ml-auto">
@@ -321,7 +329,7 @@
 										</svg>
 										<div class="feature__content">
 											<h3 class="h5 feature__heading">Base64</h3>
-											<p class="feature__description text-sm">Assets are encoded with base64 and inserted to the HTML on the fly</p>
+											<p class="feature__description text-sm">Assets are encoded with base64 and inserted into the HTML on the fly</p>
 										</div>
 									</article>
 								</div>
