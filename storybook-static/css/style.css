@@ -937,15 +937,15 @@ body {
   width: var(--icon-size);
   height: var(--icon-size);
   fill: transparent;
-  stroke: currentcolor;
+  stroke: currentColor;
   stroke-width: 0;
   vertical-align: middle
 }
 .icon:not(.icon--cl) [stroke] {
-  stroke: currentcolor
+  stroke: currentColor
 }
 .icon:not(.icon--cl) [fill] {
-  fill: currentcolor
+  fill: currentColor
 }
 .icon--lg {
   font-size: 20px
