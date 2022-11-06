@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="robots" content="noindex, nofollow">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
@@ -25,7 +24,7 @@
 	<meta property="og:image:type" content="image/png">
 	<meta property="og:image:width" content="1000">
 	<meta property="og:image:height" content="500">
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/style-7147c01fdc.css">
 	<script src="../libs/css-vars-ponyfill/css-vars-ponyfill.min.js"></script>
 	<script src="../libs/svg4everybody/svg4everybody.min.js"></script>
 	<script>
@@ -39,14 +38,19 @@
 			shadowDOM: true,
 		});
 
-		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-		m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		(function(m, e, t, r, i, k, a) {
+			m[i] = m[i] || function() {
+				(m[i].a = m[i].a || []).push(arguments)
+			};
+			m[i].l = 1 * new Date();
+			k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		})
 		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
 		ym(88984810, "init", {
-			clickmap:true,
-			trackLinks:true,
-			accurateTrackBounce:true
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true
 		});
 	</script>
 </head>
@@ -73,8 +77,8 @@
 									<svg class="icon icon-russia icon--cl icon--md mr-4">
 										<use xlink:href="/img/svg/icons.svg#russia"></use>
 									</svg>Русский
-									<svg class="icon icon-chevron-up dropdown__icon">
-										<use xlink:href="/img/svg/icons.svg#chevron-up"></use>
+									<svg class="icon icon-chevron-down dropdown__icon">
+										<use xlink:href="/img/svg/icons.svg#chevron-down"></use>
 									</svg>
 								</button>
 								<ul class="dropdown__menu" aria-labelledby="dropdown">
@@ -209,10 +213,10 @@
 										<li>Выполните <code class="code">npm run dev</code>, если вам не&nbsp;нужно упаковывать все ресурсы в&nbsp;HTML и&nbsp;конвертировать
 											получившийся HTML&nbsp;в PDF на&nbsp;лету. В&nbsp;этом режиме доступны sourcemaps;
 										</li>
-										<li>Проект запустится по адресу <code class="code">http://localhost:3004/index.html</code>;</li>
+										<li>Проект запустится по адресу <code class="code">http://localhost:3002/index.html</code>;</li>
 									</ul>
 								</li>
-								<li>Создайте копию файла <code class="code">/app/pug/pages/index.pug</code> и назовите его так, как вам нужно;</li>
+								<li>Создайте копию файла <code class="code">/app/pug/pages/index.pug</code> (или <code class="code">/app/html/html-example.html</code>, если хотите использовать HTML) и назовите его так, как вам нужно;</li>
 								<li>Если необходимо, в папке <code class="code">/app/scss/pages/</code> создайте SCSS-файл стилей для новой страницы и подключите его к файлу <code class="code">/app/scss/_pages.scss</code>;</li>
 								<li>Пишите разметку в файле, созданном в пунке 4. Весь код должен быть написан внутри блока с классами <code class="code">.sheet.A4-m-15mm</code>;</li>
 								<li>Используйте готовые <a class="link" href="#">утилиты</a> и <a class="link" href="#">компоненты</a>;</li>
@@ -250,7 +254,7 @@
 					<h2 class="h2 section__heading">Поддержка ASAP PDF</h2>
 					<div class="row">
 						<div class="lg:col-6 col-12 lg:offset-1">
-							<p class="ta-c sm:ta-l md:pr-28 md:mt-44">ASAP PDF разрабатывается в&nbsp;свободное время небольшой дружной <a class="link link--violet" href="/team.html" title="ASAP PDF team">командой</a>. Нам будет приятно, если вы&nbsp;поддержите наш проект и&nbsp;мотивируете нас
+							<p class="ta-c sm:ta-l md:pr-28 md:mt-44">ASAP PDF разрабатывается в&nbsp;свободное время небольшой дружной <a class="link link--violet" href="/ru/team.html" title="ASAP PDF team">командой</a>. Нам будет приятно, если вы&nbsp;поддержите наш проект и&nbsp;мотивируете нас
 								к&nbsp;развитию проекта.
 							</p>
 							<div class="d-flex flex-ai-center flex-column sm:d-block mt-28 ml-auto">
@@ -261,13 +265,15 @@
 									<svg class="icon icon-boosty-light icon--cl">
 										<use xlink:href="/img/svg/icons.svg#boosty-light"></use>
 									</svg></a>
-								<p class="text-sm mt-28"><strong>Поддержать криптой:</strong></p><a class="d-block max-w-180 mt-8" href="#" target="_blank" title="Поддержать криптовалютой на NOWPayments"><img class="d-block w-100p h-auto" src="https://nowpayments.io/images/embeds/donation-button-white.svg" alt="Crypto donation button by NOWPayments"></a>
+								<p class="text-sm mt-28"><strong>Поддержать криптой (ETH):</strong></p>
+								<p class="text-md text-break mt-4">0x806eebd0BA32b5a51EB1DB819BDFc30C040C511f</p>
 							</div>
 						</div>
 						<div class="lg:col-4 lg:d-block d-none">
+							<p class="text-xs ta-c"><strong>CloudTips:</strong></p>
 							<picture>
 								<source type="image/webp" srcset="../img/qr-code.webp">
-								<source type="image/png" srcset="../img/qr-code.png"><img class="d-block mx-auto w-100p max-w-360 brs-8 h-auto mt-n16" alt="Иллюстрация" aria-hidden="true" src="../img/qr-code.png">
+								<source type="image/png" srcset="../img/qr-code.png"><img class="d-block mx-auto w-100p max-w-360 brs-8 h-auto" alt="QR-код CloudTips" aria-hidden="true" src="../img/qr-code.png">
 							</picture>
 						</div>
 					</div>
@@ -468,8 +474,8 @@
 									<svg class="icon icon-russia icon--cl icon--md mr-4">
 										<use xlink:href="/img/svg/icons.svg#russia"></use>
 									</svg>Русский
-									<svg class="icon icon-chevron-up dropdown__icon">
-										<use xlink:href="/img/svg/icons.svg#chevron-up"></use>
+									<svg class="icon icon-chevron-down dropdown__icon">
+										<use xlink:href="/img/svg/icons.svg#chevron-down"></use>
 									</svg>
 								</button>
 								<ul class="dropdown__menu" aria-labelledby="dropdownFooter">
@@ -501,14 +507,16 @@
 								</svg></a><a class="btn btn--ghost btn--sm px-16 mt-16" href="https://boosty.to/asap-pdf" title="boosty" target="_blank" rel="noopener">
 								<svg class="icon icon-boosty icon--cl">
 									<use xlink:href="/img/svg/icons.svg#boosty"></use>
-								</svg></a><a class="d-block max-w-180 mt-16" href="#" target="_blank"><img class="d-block w-100p h-auto" src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments"></a>
+								</svg></a>
+							<p class="text-sm mt-20"><strong>Поддержать криптой (ETH):</strong></p>
+							<p class="text-sm text-break max-w-280 mt-4">0x806eebd0BA32b5a51EB1DB819BDFc30C040C511f</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</footer>
 	</div>
-	<script src="../js/app.js"></script>
+	<script src="../js/app-19485ec678.js"></script>
 </body>
 
 </html>

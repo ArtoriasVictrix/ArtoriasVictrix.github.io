@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="robots" content="noindex, nofollow">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -25,7 +24,7 @@
 	<meta property="og:image:type" content="image/png">
 	<meta property="og:image:width" content="1000">
 	<meta property="og:image:height" content="500">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-7147c01fdc.css">
 	<script src="libs/css-vars-ponyfill/css-vars-ponyfill.min.js"></script>
 	<script src="libs/svg4everybody/svg4everybody.min.js"></script>
 	<script>
@@ -39,14 +38,19 @@
 			shadowDOM: true,
 		});
 
-		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-		m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		(function(m, e, t, r, i, k, a) {
+			m[i] = m[i] || function() {
+				(m[i].a = m[i].a || []).push(arguments)
+			};
+			m[i].l = 1 * new Date();
+			k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		})
 		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
 		ym(88984810, "init", {
-			clickmap:true,
-			trackLinks:true,
-			accurateTrackBounce:true
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true
 		});
 	</script>
 </head>
@@ -73,8 +77,8 @@
 									<svg class="icon icon-united-states icon--cl icon--md mr-4">
 										<use xlink:href="/img/svg/icons.svg#united-states"></use>
 									</svg>English
-									<svg class="icon icon-chevron-up dropdown__icon">
-										<use xlink:href="/img/svg/icons.svg#chevron-up"></use>
+									<svg class="icon icon-chevron-down dropdown__icon">
+										<use xlink:href="/img/svg/icons.svg#chevron-down"></use>
 									</svg>
 								</button>
 								<ul class="dropdown__menu" aria-labelledby="dropdown">
@@ -104,6 +108,21 @@
 					</button>
 				</div>
 			</nav>
+			<div class="lang-switcher d-none" id="langBar">
+				<div class="lang-switcher__container container">
+					<div class="lang-switcher__text-container">
+						<svg class="icon icon-russia icon--md icon--cl va-t mr-8">
+							<use xlink:href="/img/svg/icons.svg#russia"></use>
+						</svg>
+						<p class="lang-switcher__text text-xs">Есть версия на русском языке. <a class="lang-switcher__link" href="./ru/index.html">Перейти&nbsp;»</a></p>
+					</div>
+					<button class="btn btn--primary btn--xs lang-switcher__close-btn" id="langSwitcherBtn" type="button" aria-label="Close notification">
+						<svg class="icon icon-x icon--md">
+							<use xlink:href="/img/svg/icons.svg#x"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
 		</header>
 		<main class="main">
 			<section class="section hero">
@@ -211,10 +230,10 @@
 										<li>Run <code class="code">npm run dev</code> if you don't need to inline all external assets to HTML and convert the final
 											HTML to PDF on the fly. Sourcemaps are available in this mode;
 										</li>
-										<li>The project will start at <code class="code">http://localhost:3004/index.html</code>;</li>
+										<li>The project will start at <code class="code">http://localhost:3002/index.html</code>;</li>
 									</ul>
 								</li>
-								<li>Make a copy of the file <code class="code">/app/pug/pages/index.pug</code> and name it whatever you need;</li>
+								<li>Make a copy of the file <code class="code">/app/pug/pages/index.pug</code> (or <code class="code">/app/html/html-example.html</code> if you want to use HTML) and name it whatever you need;</li>
 								<li>Create a SCSS file for the new page in the folder <code class="code">/app/scss/pages/</code> and import it in the file <code class="code">/app/scss/_pages.scss</code>, if needed;</li>
 								<li>
 									Write markup in the file created in step 4. All the code should be written inside the block with <code class="code">.sheet.A4-m-15mm</code> classes;</li>
@@ -252,21 +271,19 @@
 					<h2 class="h2 section__heading">Support ASAP PDF</h2>
 					<div class="row">
 						<div class="md:col-6 col-12 md:offset-1">
-							<p class="ta-c sm:ta-l md:pr-28 md:mt-44">ASAP PDF is developed by our small, friendly <a class="link link--violet" href="/en/team.html" title="ASAP PDF team">team</a>; we work on the project in our free time. We would appreciate it if you support ASAP PDF
+							<p class="ta-c sm:ta-l md:pr-28 md:mt-44">ASAP PDF is developed by our small, friendly <a class="link link--violet" href="/team.html" title="ASAP PDF team">team</a>; we work on the project in our free time. We would appreciate it if you support ASAP PDF
 								and motivate us to develop it.
 							</p>
 							<div class="d-flex flex-ai-center flex-column sm:d-block mt-28 ml-auto">
-								<p class="text-sm"><strong>Crypto donations:</strong></p><a class="d-block max-w-220 mt-8" href="#" target="_blank"><img class="d-block w-100p h-auto" src="https://nowpayments.io/images/embeds/donation-button-white.svg" alt="Crypto donation button by NOWPayments"></a>
-								<p class="text-sm mt-28"><strong>Donation platforms:</strong></p><a class="btn btn--ghost btn--md text-white mt-8" href="https://boosty.to/asap-pdf" title="boosty" target="_blank" rel="noopener">
-									<svg class="icon icon-boosty-light icon--lg icon--cl">
-										<use xlink:href="/img/svg/icons.svg#boosty-light"></use>
-									</svg></a>
+								<p class="text-sm"><strong>Crypto donations (ETH):</strong></p>
+								<p class="text-md text-break mt-4">0x806eebd0BA32b5a51EB1DB819BDFc30C040C511f</p>
 							</div>
 						</div>
-						<div class="md:col-4 md:d-block d-none">
+						<div class="lg:col-4 lg:d-block d-none">
+							<p class="text-xs ta-c"><strong>Donate ETH:</strong></p>
 							<picture>
-								<source type="image/webp" srcset="img/dollar.webp">
-								<source type="image/png" srcset="img/dollar.png"><img class="d-block mx-auto w-100p max-w-360 h-auto lg:mt-n16 mt-28" alt="Illustration" aria-hidden="true" src="img/dollar.png">
+								<source type="image/webp" srcset="../img/qr-code-eth.webp">
+								<source type="image/png" srcset="../img/qr-code-eth.png"><img class="d-block mx-auto w-100p max-w-360 brs-8 h-auto" alt="QR-code ETH" aria-hidden="true" src="../img/qr-code-eth.png">
 							</picture>
 						</div>
 					</div>
@@ -465,8 +482,8 @@
 									<svg class="icon icon-united-states icon--cl icon--md mr-4">
 										<use xlink:href="/img/svg/icons.svg#united-states"></use>
 									</svg>English
-									<svg class="icon icon-chevron-up dropdown__icon">
-										<use xlink:href="/img/svg/icons.svg#chevron-up"></use>
+									<svg class="icon icon-chevron-down dropdown__icon">
+										<use xlink:href="/img/svg/icons.svg#chevron-down"></use>
 									</svg>
 								</button>
 								<ul class="dropdown__menu" aria-labelledby="dropdownFooter">
@@ -492,17 +509,15 @@
 									</svg></a></div>
 						</div>
 						<div class="d-flex flex-column flex-ai-start mb-24 lg:flex-ai-end">
-							<p class="mt-12 mb-16 sm:d-none"><strong>Support ASAP PDF</strong></p><a class="d-block max-w-180" href="#" target="_blank"><img class="d-block w-100p h-auto" src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments"></a><a class="btn btn--ghost btn--sm pr-16 mt-16" href="https://boosty.to/asap-pdf" title="boosty" target="_blank" rel="noopener">
-								<svg class="icon icon-boosty icon--lg icon--cl">
-									<use xlink:href="/img/svg/icons.svg#boosty"></use>
-								</svg></a>
+							<p class="text-sm mt-12"><strong>Support ASAP PDF (ETH):</strong></p>
+							<p class="text-sm text-break max-w-280 mt-4">0x806eebd0BA32b5a51EB1DB819BDFc30C040C511f</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.js"></script>
+	<script src="js/app-19485ec678.js"></script>
 </body>
 
 </html>
