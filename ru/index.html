@@ -24,7 +24,7 @@
 	<meta property="og:image:type" content="image/png">
 	<meta property="og:image:width" content="1000">
 	<meta property="og:image:height" content="500">
-	<link rel="stylesheet" href="../css/style-8edde5e6ff.css">
+	<link rel="stylesheet" href="../css/style-3ba71f5b85.css">
 	<script src="../libs/css-vars-ponyfill/css-vars-ponyfill.min.js"></script>
 	<script src="../libs/svg4everybody/svg4everybody.min.js"></script>
 	<script>
@@ -135,9 +135,9 @@
 					<div class="row">
 						<div class="md:col-10 col-12 md:offset-1">
 							<h2 class="h2 section__heading" id="about">О фреймворке</h2>
-							<video class="video" controls="" title="Видео: как работает ASAP PDF" poster="../img/vscode-demo.jpg">
-								<source src="../video/vscode-demo.mp4" type="video/mp4">
-								<source src="../video/vscode-demo.webm" type="video/webm">
+							<video class="video" controls="" title="Видео: как работает ASAP PDF" poster="../img/demo.jpg">
+								<source src="../video/demo.mp4" type="video/mp4">
+								<source src="../video/demo.webm" type="video/webm">
 							</video>
 							<div class="md:mt-44 mt-28">
 								<p>
@@ -192,10 +192,30 @@
 					<div class="row">
 						<div class="md:col-10 col-12 md:offset-1">
 							<h2 class="h2 section__heading" id="quick-start">Быстрый старт</h2>
-							<video class="video" controls="" title="Видео: быстрый старт" poster="../img/quick-start.jpg">
-								<source src="../video/quick-start.mp4" type="video/mp4">
-								<source src="../video/quick-start.webm" type="video/webm">
-							</video>
+							<div class="tabs">
+								<ul class="tabs__nav">
+									<li class="tabs__nav-item">
+										<button class="tabs__btn tabs__btn--active" data-tab="tab-1">Prod</button>
+									</li>
+									<li class="tabs__nav-item">
+										<button class="tabs__btn" data-tab="tab-2">Dev</button>
+									</li>
+								</ul>
+								<div class="tabs__content">
+									<div class="tabs__tab tabs__tab--active" data-tab="tab-1">
+										<video class="video" controls="" title="Видео: быстрый старт в режиме production" poster="../img/quick-start.jpg">
+											<source src="../video/quick-start.mp4" type="video/mp4">
+											<source src="../video/quick-start.webm" type="video/webm">
+										</video>
+									</div>
+									<div class="tabs__tab" data-tab="tab-2">
+										<video class="video" controls="" title="Видео: быстрый старт в режиме development" poster="../img/quick-start-dev.jpg">
+											<source src="../video/quick-start-dev.mp4" type="video/mp4">
+											<source src="../video/quick-start-dev.webm" type="video/webm">
+										</video>
+									</div>
+								</div>
+							</div>
 							<h3 class="h5 md:mt-44 mt-28 mb-0">Требования:</h3>
 							<ul class="ul ul--point text-break mt-20">
 								<li>Node v14.15.0 и выше</li>
@@ -509,7 +529,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="../js/app-69b86e1888.js"></script>
+	<script src="../js/app-ae073febe9.js"></script>
 </body>
 
 </html>
